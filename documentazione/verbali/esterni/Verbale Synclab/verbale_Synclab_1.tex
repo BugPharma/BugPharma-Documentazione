@@ -1,0 +1,169 @@
+\documentclass[11pt]{article}
+
+\usepackage[english,italian]{babel}
+\usepackage[a4paper, top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{float}
+\usepackage{ltablex}
+\usepackage{titling}
+\usepackage{blindtext}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage[italian]{babel}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage[bottom]{footmisc}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\usepackage{amsmath, amssymb}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{layouts}
+\usepackage{url}
+\usepackage{comment}
+\usepackage{eurosym}
+
+
+
+
+
+
+\begin{document}
+
+	\thispagestyle{empty}
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[scale = 0.05]{/home/nicla/Scrivania/SWE/verbali/logo_unipd.png}\\
+			\large \textbf{Università degli Studi di Padova} \\
+			\vfill
+			\includegraphics[scale = 0.7]{/home/nicla/Scrivania/SWE/verbali/logo_small.jpg}\\
+			\large \textbf{Bug Pharma} \\
+			\vfill
+			\large
+			E-mail: 
+			\texttt{bugpharma10@gmail.com}
+			\vfill
+			\Huge \textbf{Verbale esterno del 12-11-2021}\\
+			\large \textbf{Synclab - Blockchange}\\
+			
+			
+			\vfill
+			
+			
+			\begin{tabular}{r|l}
+				\textbf{Approvazione} &  -\\
+				\textbf{Redazione} &  \parbox[t]{5cm}{Andrea Salmaso \\Nicla Faccioli}\\
+				\textbf{Verifica} &  -\\
+				\textbf{Stato} & Redatto \\
+				\textbf{Uso} & Esterno
+			\end{tabular}
+			\vfill
+			
+		\end{center}
+	\end{titlepage}
+	
+	\section{Informazioni generali}
+		\subsection{Luogo e data dell'incontro}
+			\begin{itemize}
+				\item \textbf{luogo}: videoconferenza Zoom;
+				\item \textbf{data}: 12-11-2021;
+				\item \textbf{ora di inizio}: 16:00;
+				\item \textbf{ora di fine}: 16:40.
+			\end{itemize}
+		
+		\subsection{Presenze}
+			\begin{itemize}
+				\item \textbf{Totale presenze}: 5 su 7;
+				\item \textbf{Presenti}:
+				\begin{itemize}
+					\item Lorenzo Piran; 
+					\item Michele Masetto;
+					\item Nicla Faccioli (segretaria);
+					\item Andrea Salmaso;
+					\item Nicholas Sertori.
+				\end{itemize}
+				\item \textbf{Assenti}: 
+					\begin{itemize}
+						\item Silvia Giro;
+						\item Sara Nanni;
+					\end{itemize}
+				\item \textbf{Partecipanti esterni}: Fabio Pallaro (Synclab)
+			\end{itemize}
+		
+		\newpage
+		
+		\subsection{Domande e risposte}
+			\begin{enumerate}
+				\item \textbf{Cosa succederebbe se ci fosse un pacco smarrito? (es: problema di logistica, anche se il venditore ha inviato il pacco e l’acquirente ha pagato - soldi bloccati nello smart contract)}\\
+				
+				Prendere spunto da PayPal o simili: 
+				\begin{enumerate}
+					\item l’acquirente apre una contestazione da app mobile oppure con interfaccia lato cliente (loggandosi con il proprio wallet);
+					\item vede le sue transazioni in corso;
+					\item per la transazione di cui non ha ricevuto il pacco potrà segnalare il problema.
+					\item All’apertura della segnalazione, arriva una notifica al venditore (invio alla mail del venditore registrata sul database).
+					\item	Il venditore analizza il caso e ha due possibilità: 
+						\begin{itemize}
+							\item annulla la transazione (comunica con la blockchain e i soldi tornano all’acquirente) 
+							\item oppure se poi il pacco arriva, il cliente annulla la contestazione e quindi i soldi arrivano al venditore.
+						\end{itemize}
+				\end{enumerate}
+				\item \textbf{E se il pacco arriva dopo aver concluso la segnalazione e aver restituito i soldi?}\\
+				\begin{itemize}
+					\item Preveniamo questo problema lasciando passare un paio di mesi prima di effettuare il rimborso, in modo da permettere al pacco di arrivare/essere restituito al mittente.
+					\item Se il pacco va perso, il problema viene rimandato al corriere (i soldi tornano all’acquirente e il venditore viene risarcito con l’assicurazione della compagnia di trasporti).
+				\end{itemize}
+				
+				\item \textbf{Serve anonimato? È possibile ricontattare il venditore, per natura stessa della blockchain?}\\
+				
+				Sia venditore che acquirente sono in chiaro. Infatti:
+				\begin{itemize}
+					\item il cliente che compra va sul portale web del venditore 
+					\item il sito di e-commerce conosce nome, cognome e indirizzo di consegna dell’acquirente dalla registrazione al sito, a prescindere dal nostro servizio.
+				\end{itemize}
+				
+				Nel nostro caso quindi teniamo tutto in chiaro, anche eventuali comunicazioni tra le due parti. Escludiamo la possibilità di dare all’acquirente un modo di comunicare direttamente con il nostro servizio, che invece viene fornito al venditore (che dovrà iscriversi alla nostra piattaforma per poterla utilizzare). \\
+				\textbf{OPZIONALE:} volendo si può pensare di implementare una web-app di monitoraggio delle transazioni per l’acquirente.
+				
+				Il gruppo aveva pensato ad una soluzione in stile Amazon-locker per garantire una sorta di anonimato per l’acquirente, ma è preferibile rimanere sul semplice e fare tutto in chiaro
+				
+				\item \textbf{Che politica abbiamo per resi e rimborsi? E come possiamo esser sicuri che il venditore una volta ricevuto il pagamento non scappi coi soldi? (L'acquirente paga ma il pacco non contiene quello che dovrebbe - Problema del mattone)} \\
+				
+				\textbf{OPZIONALE:} \\
+				si potrebbe procedere così:
+					\begin{enumerate}
+						\item nel momento dello sblocco del pacco non viene rilasciato tutto l’importo ma solo metà;
+						\item Poi, una volta aperto il pacco e verificato che contiene ciò che deve, viene rilasciato un altro quarto dell’importo totale;
+						\item Infine, quando l’acquirente ha verificato che sia tutto regolare, viene rilasciato l’ultimo quarto.
+					\end{enumerate}   
+				Potrebbero comunque esserci inconvenienti. Ad esempio: se l’acquirente sblocca la prima metà e poi non sblocca più niente, i soldi restano fermi sullo smart-contract. \\
+				\underline{Opzione interessante:} dopo qualche settimana avviene uno sblocco automatico del resto dei soldi nel caso in cui non vengano sollevate segnalazioni da parte dell’acquirente (Le tempistiche non sono un problema. Sarà tutto configurabile.)
+				
+				\item \textbf{Come confermare la ricezione? (Ad esempio, se si utilizza la scansione del QR code, cosa succede se all’arrivo del pacco l’acquirente non ha la possibilità di fare lo scan per qualche motivo)}\\
+				
+				Oltre che usare il QR, si deve fornire un secondo metodo per la conferma della ricezione, sfruttando il fatto che il QR code in realtà è una stringa: nell’applicazione potrebbe esserci la possibilità di digitare manualmente tale stringa (riportata anche sul pacco).
+				
+				\item \textbf{E se volessi delegare qualcuno per ritirare il pacco?}\\
+				
+				È un punto debole perchè il pacco va sbloccato con il wallet dell’acquirente.\\
+				\textbf{OPZIONALE:} per risolvere si può creare un meccanismo per dare all’acquirente la possibilità di indicare dei delegati, specificando i loro wallet address.
+				
+				\item \textbf{Noi non abbiamo molta (se non nulla) esperienza con blockchain e criptovalute, quindi se dovessimo scegliere questo capitolato dovremmo studiare queste tecnologie da zero. Quanto è necessario approfondire il tema per poter presentare un progetto adeguato? In altre parole: è fattibile scegliere questo capitolato senza avere conoscenze pregresse sulle tecnologie che sembrano essere un po’ il punto centrale?}\\
+				
+				È possibile tarare il progetto sulle nostre conoscenze, in modo da lavorare sulla parte blockchain il minimo indispensabile (usando magari Ethereum, che ha una grande community che ci può aiutare e sfruttando materiali forniti dall'azienda). Non ci sono problemi: per bilanciare ci si potrebbe concentrare di più sulla parte acquirente, dato che la parte blockchain sarebbe un po’ più povera.
+			
+			\end{enumerate}
+			
+			
+		
+			
+			
+			
+			
+
+	
+\end{document}
