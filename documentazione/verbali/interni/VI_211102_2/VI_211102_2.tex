@@ -1,0 +1,138 @@
+\documentclass[11pt]{article}
+
+\usepackage[english,italian]{babel}
+\usepackage[a4paper, top=2cm, bottom=1.5cm, left=2cm, right=2cm]{geometry}
+\usepackage{float}
+\usepackage{ltablex}
+\usepackage{titling}
+\usepackage{blindtext}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage[italian]{babel}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage[bottom]{footmisc}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\usepackage{amsmath, amssymb}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{layouts}
+\usepackage{url}
+\usepackage{comment}
+\usepackage{eurosym}
+
+
+
+
+
+
+\begin{document}
+
+	\thispagestyle{empty}
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[scale = 0.05]{logo_unipd.png}\\
+			\large \textbf{Università degli Studi di Padova} \\
+			\vfill
+			\includegraphics[scale = 0.7]{logo_small.jpg}\\
+			\large \textbf{Bug Pharma} \\
+			\vfill
+			\large
+			E-mail: 
+			\texttt{bugpharma10@gmail.com}
+			\vfill
+			\Huge \textbf{Verbale interno del 02-11-2021}\\
+			
+			\large
+			%per verbali esterni
+			%\textbf{Zucchetti S.p.A. - Login Warrior}\\
+			
+			%per verbali interni
+			\vfill
+			\textbf{Ordine del giorno:} \\
+			Individuazione aspetti positivi e negativi capitolato C2
+			
+			
+			\vfill
+			
+			
+			\begin{tabular}{r|l}
+				\textbf{Approvazione} &  -\\
+				\textbf{Redazione} &  \parbox[t]{5cm}{Lorenzo Piran}\\
+				\textbf{Verifica} &  -\\
+				\textbf{Stato} & Redatto \\
+				\textbf{Uso} & Interno
+			\end{tabular}
+			\vfill
+			
+		\end{center}
+	\end{titlepage}
+
+	\section{Informazioni generali}
+	\subsection{Luogo e data dell'incontro}
+	\begin{itemize}
+		\item \textbf{Luogo}: videoconferenza Zoom;
+		\item \textbf{Data}: 02-11-2021;
+		\item \textbf{Ora di inizio}: 13:30;
+		\item \textbf{Ora di fine}: 14:15.
+	\end{itemize}
+	
+	\subsection{Presenze}
+	\begin{itemize}
+		\item \textbf{Totale presenze}: 3;
+		\item \textbf{Presenti}:
+		\begin{itemize}
+			\item Lorenzo Piran (segretario);
+			\item Michele Masetto;
+			\item Silvia Giro.
+		\end{itemize}
+		\item \textbf{Assenti}:
+		\begin{itemize}
+			\item Nicla Faccioli;
+			\item Sara Nanni;
+			\item Andrea Salmaso;
+			\item Nicholas Sertori.
+		\end{itemize}
+		%\item \textbf{Partecipanti esterni}:
+		%\begin{itemize}
+		%	\item Gregorio Piccoli (Zucchetti S.p.A.).
+		%\end{itemize}
+	\end{itemize}
+
+	\newpage
+
+	\section{Punti salienti}
+		Sono emersi i seguenti pro e contro, già in parte discussi nell'incontro di Mercoledì 20 Ottobre 2021:
+		\begin{itemize}
+			\item PRO:
+			\begin{itemize}
+				\item Il progetto permetterebbe al gruppo di cimentarsi in una sfida impegnativa, ma spendibile in futuro
+				in termini di conoscenze acquisite;
+			\end{itemize}
+			\item CONTRO:
+				\begin{itemize}
+				\item I componenti del gruppo hanno esperienza quasi nulla sugli argomenti chiave che dovranno essere
+				trattati, fatto che potrebbe portare a diversi inconvenienti.
+				\item Sono emerse le seguenti domande, le cui risposte potrebbero portare ad un numero eccessivamente
+				alto di casi d'uso, di possibile difficile gestione:
+				\begin{enumerate}
+					\item Cosa succederebbe se ci fosse un pacco smarrito? (es: problema di logistica, anche se il venditore
+					ha inviato il pacco e l'acquirente ha pagato - soldi bloccati nello smart contract);
+					\item Serve anonimato? È possibile ricontattare il venditore, per natura stessa della blockchain?;
+					\item Che politica abbiamo per resi e rimborsi? E come possiamo esser sicuri che il venditore una volta
+					ricevuto il pagamento non scappi coi soldi?;
+					\item Come confermare la ricezione? (Ad esempio, se si utilizza la scansione del QR code, cosa succede
+					se all'arrivo del pacco l'acquirente non ha la possibilità di fare lo scan per qualche motivo);
+					\item E se volessi delegare qualcuno per ritirare il pacco?;
+					\item È fattibile scegliere questo capitolato senza avere conoscenze pregresse sulle tecnologie che
+					sembrano essere un po' il punto centrale?
+				\end{enumerate}
+			\end{itemize}
+		\end{itemize}
+\end{document}
