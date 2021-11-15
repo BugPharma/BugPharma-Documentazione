@@ -1,0 +1,222 @@
+\documentclass[11pt]{article}
+
+\usepackage[english,italian]{babel}
+\usepackage[a4paper, top=2cm, bottom=1.5cm, left=2cm, right=2cm]{geometry}
+\usepackage{float}
+\usepackage{ltablex}
+\usepackage{titling}
+\usepackage{blindtext}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage[italian]{babel}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage[bottom]{footmisc}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\usepackage{amsmath, amssymb}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{layouts}
+\usepackage{url}
+\usepackage{comment}
+\usepackage{eurosym}
+
+
+
+
+
+
+\begin{document}
+
+	\thispagestyle{empty}
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[scale = 0.05]{../../logo_unipd.png}\\
+			\large \textbf{Università degli Studi di Padova} \\
+			\vfill
+			\includegraphics[scale = 0.7]{../../logo_small.jpg}\\
+			\large \textbf{Bug Pharma} \\
+			\vfill
+			\large
+			E-mail: 
+			\texttt{bugpharma10@gmail.com}
+			\vfill
+			\Huge \textbf{Verbale esterno del 05-11-2021}\\
+			
+			\large
+			%per verbali esterni
+			\textbf{Zucchetti S.p.A. - Login Warrior}\\
+			
+			%per verbali interni
+			%\vfill
+			%\textbf{Ordine del giorno:} \\
+			
+			
+			
+			\vfill
+			
+			
+			\begin{tabular}{r|l}
+				\textbf{Approvazione} &  -\\
+				\textbf{Redazione} &  \parbox[t]{5cm}{Andrea Salmaso \\Nicla Faccioli}\\
+				\textbf{Verifica} &  -\\
+				\textbf{Stato} & Redatto \\
+				\textbf{Uso} & Esterno
+			\end{tabular}
+			\vfill
+			
+		\end{center}
+	\end{titlepage}
+
+	\section{Informazioni generali}
+	\subsection{Luogo e data dell'incontro}
+	\begin{itemize}
+		\item \textbf{Luogo}: videoconferenza Zoom;
+		\item \textbf{Data}: 12-11-2021;
+		\item \textbf{Ora di inizio}: 16:00;
+		\item \textbf{Ora di fine}: 16:45.
+	\end{itemize}
+	
+	\subsection{Presenze}
+	\begin{itemize}
+		\item \textbf{Totale presenze}: 7;
+		\item \textbf{Presenti}:
+		\begin{itemize}
+			\item Lorenzo Piran;
+			\item Michele Masetto;
+			\item Silvia Giro;
+			\item Nicla Faccioli (segretaria);
+			\item Sara Nanni;
+			\item Andrea Salmaso;
+			\item Nicholas Sertori.
+		\end{itemize}
+		\item \textbf{Assenti}: nessuno
+		\item \textbf{Partecipanti esterni}:
+		\begin{itemize}
+			\item Gregorio Piccoli (Zucchetti S.p.A.).
+		\end{itemize}
+	\end{itemize}
+
+	\newpage
+
+	\section{Domande e risposte}
+		\begin{enumerate}
+			\item \textbf{Che tipo di sito serve?
+			C'è altro oltre alla visualizzazione dei dati, come ad esempio il caricamento dei dati da parte dell'utente?
+			Che livello di interazione con il sito serve da parte dell'utente?}
+			\medskip
+			\begin{itemize}
+				\item Il caricamento dei dati tramite csv dovrebbe stare nell'applicazione.
+				\item Il tema principale è la visualizzazione:
+				\begin{itemize}
+					\item [(a)] con la libreria \texttt{D3.js} vengono generati grafici a partire dai dati caricati;
+					\item [(b)] successivamente si va a discrezione del fornitore.
+				\end{itemize}
+				Centrale quindi l'interazione con l'utente.
+			\end{itemize}
+		
+			\bigskip
+			
+			\item \textbf{Qual è il punto centrale del progetto?
+			Solo la preparazione e l'analisi dei dati o dobbiamo preoccuparci anche della sicurezza?}
+			\medskip
+			\begin{itemize}
+				\item Idea principale: utilizzo del prodotto da parte di un sistemista che esegue un monitoraggio
+				dei dati di login a vari applicativi aziendali da parte dei dipendenti.
+				\begin{itemize}
+					\item [(a)] I dati di login vengono forniti in un file \texttt{CSV};
+					\item [(b)] Il file viene caricato nel sistema per l'esplorazione dei dati;
+					\item [(c)] Il sistema visualizza vari grafici (i quali devono essere scelti dal fornitore).
+				\end{itemize}
+				\item Per quanto riguarda la sicurezza dei dati:
+				\begin{itemize}
+					\item Se il file contenente i dati viene caricato in locale: è un tema marginale;
+					\item Se il file viene caricato nel server per una più facile gestione (data la quantità di dati):
+					è necessario valutarla.
+					Per quanto sensata sia come scelta, dal punto di vista del progetto potrebbe portare via tempo a
+					cose più interessanti (come il Machine Learning).\\
+					\underline{Idea:} Si potrebbe segnalare al  committente, il quale saprà di dover aumentare il budget.
+				\end{itemize}
+			\end{itemize}
+
+			\bigskip
+			
+			\item \textbf{Che tipo di dati ci sono nei file \texttt{CSV}?
+			Consigli su come utilizzarli?}
+			\medskip
+			\begin{itemize}
+				\item È stato aperto un file di esempio e ne sono stati mostrati i punti salienti.\\
+				I dati che l'azienda ci fornirà contengono:
+				\begin{itemize}
+					\item Numero utente;
+					\item Data dell'evento (dato \textbf{importante});
+					\item Tipo di evento:
+					\begin{itemize}
+						\item Login;
+						\item Errore login;
+						\item Logout.
+					\end{itemize}
+					\item Applicativo di accesso;
+					\item IP sorgente;
+					\item Altri dati non necessari.
+				\end{itemize}
+				\item Conviene dividere la data nelle sue parti (giorno della settimana, mese, settimana dell'anno, ecc)
+				per sfruttarla meglio, così come la fascia oraria (ore e minuti).
+				\item \textbf{Obiettivo finale}: vedere come si distribuiscono.
+			\end{itemize}
+			
+			\bigskip
+			
+			\item \textbf{Quali sono i parametri per giudicare un login sospetto?}
+			\medskip
+			\begin{itemize}
+				\item Nessun grafico potrà supportare tutte le coordinate contenute nel file \texttt{CSV};
+				\item Problemi centrali:
+				\begin{itemize}
+					\item Scelta delle coordinate da mettere nel grafico;
+					\item Filtrazione dei dati per ricavarne la massima utilità.
+				\end{itemize}
+				\item Sarà necessario valutare il comportamento, a livello prestazionale, del grafico, data la mole di
+				dati che dovranno essere visualizzati.\\
+				Sono stati dati diversi spunti:
+				\begin{itemize}
+					\item Visualizzare in sovrimpressione solo i dati di un utente, lasciando sullo sfondo una
+					nebbiolina con i dati degli altri utenti;
+					\item Utilizzare qualche algoritmo/libreria di ML, fornito/a dall'azienda (es: \texttt{PCA}, \texttt{t-SNE},
+					\texttt{UMAP}) per riduzione dimensionale (ridurre il numero di coordinate):
+					\begin{itemize}
+						\item \texttt{PCA}: riduzione lineare;
+						\item \texttt{t-SNE}, \texttt{UMAP}: non lineare, preservano le strutture locali a scapito della
+						disposizione generale (esaltazione della distanza).
+					\end{itemize}
+				\end{itemize}	
+				\item Dopo aver ottenuto una visualizzazione ottimale delle informazioni si può considerare l'introduzione
+				di algoritmi di ML che capiscano quello che l'occhio umano riesce a vedere (clusterizzazione, novelty detection,
+				domain approximation), come ad esempio \texttt{DBScan}, \texttt{HDBScan}, \texttt{One-Class SVM}.
+			\end{itemize}
+
+			\bigskip
+			
+			\item \textbf{Che tipo di formato preferiscono per i manuali da consegnare (utilizzo ed espansione)?}
+			
+			\medskip
+			
+			È possibile scrivere i manuali in \texttt{markdown} e usare il software \texttt{Pandoc} per tradurli
+			in formato \texttt{pdf}, \texttt{LaTeX} o altro.
+			
+			\bigskip
+			
+			\item \textbf{Consigli generali relativi agli anni precedenti?}
+			
+			\medskip
+			
+			Attenersi alle tecnologie che sono state indicate come consigliate.
+			
+		\end{enumerate}
+\end{document}
