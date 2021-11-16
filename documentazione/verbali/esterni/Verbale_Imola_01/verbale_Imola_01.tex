@@ -1,0 +1,187 @@
+\documentclass[11pt]{article}
+
+\usepackage[english,italian]{babel}
+\usepackage[a4paper, top=2cm, bottom=1.5cm, left=2cm, right=2cm]{geometry}
+\usepackage{float}
+\usepackage{ltablex}
+\usepackage{titling}
+\usepackage{blindtext}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage[italian]{babel}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage[bottom]{footmisc}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\usepackage{amsmath, amssymb}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{layouts}
+\usepackage{url}
+\usepackage{comment}
+\usepackage{eurosym}
+
+
+
+
+
+
+\begin{document}
+
+	\thispagestyle{empty}
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[scale = 0.05]{../logo_unipd.png}\\
+			\large \textbf{Università degli Studi di Padova} \\
+			\vfill
+			\includegraphics[scale = 0.7]{../logo_small.jpg}\\
+			\large \textbf{Bug Pharma} \\
+			\vfill
+			\large
+			E-mail: 
+			\texttt{bugpharma10@gmail.com}
+			\vfill
+			\Huge \textbf{Verbale esterno del 16-11-2021}\\
+			
+			\large
+			%per verbali esterni
+			\textbf{Imola informatica - Bot4Me}\\ 
+			
+			%per verbali interni
+			%\vfill
+			%\textbf{Ordine del giorno:} \\
+			
+			
+			
+			\vfill
+			
+			
+			\begin{tabular}{r|l}
+				\textbf{Approvazione} &  -\\
+				\textbf{Redazione} &  \parbox[t]{5cm}{Andrea Salmaso \\Nicla Faccioli}\\
+				\textbf{Verifica} &  -\\
+				\textbf{Stato} & Redatto \\
+				\textbf{Uso} & Esterno
+			\end{tabular}
+			\vfill
+			
+		\end{center}
+	\end{titlepage}
+
+	\section{Informazioni generali}
+	\subsection{Luogo e data dell'incontro}
+	\begin{itemize}
+		\item \textbf{Luogo}: videoconferenza Microsoft Teams;
+		\item \textbf{Data}: 16-11-2021;
+		\item \textbf{Ora di inizio}: 16:00;
+		\item \textbf{Ora di fine}: 16:30.
+	\end{itemize}
+	
+	\subsection{Presenze}
+	\begin{itemize}
+		\item \textbf{Totale presenze}: 5 su 7;
+		\item \textbf{Presenti}:
+		\begin{itemize}  
+			\item Michele Masetto;
+			\item Nicla Faccioli (segretaria);
+			\item Sara Nanni;
+			\item Andrea Salmaso;
+			\item Nicholas Sertori.
+		\end{itemize}
+		\item \textbf{Assenti}:
+			\begin{itemize}
+				\item Lorenzo Piran;
+				\item Silvia Giro.
+			\end{itemize}
+		\item \textbf{Partecipanti esterni}:
+			\begin{itemize}
+				\item Alessandro Proscia (Imola informatica)
+				\item Giacomo Lorenzo (Imola informatica)
+			\end{itemize}
+	\end{itemize}
+
+	\newpage
+
+	\section{Punti salienti}
+		\begin{enumerate}
+			\item \textbf{Il resoconto delle attività fatto dai dipendenti è vincolato dal timbro di entrata? Deve essere effettuato obbligatoriamente prima del timbro di uscita?}
+			
+			\medskip
+			
+			Dipende molto da quanto è diligente il dipendente. Non si tratta di un'attività giornaliera, ma ogni dipendente può effettuarla con cadenze differenti, a propria discrezione. In generale dipende dalle regole dell'azienda: ad Imola non vi è un orario di ingresso o un cartellino da timbrare, per cui non vi sono obblighi in questo senso. 
+			
+			\bigskip
+			
+			\item \textbf{Per quanto riguarda la gestione della presenza in sede e il tracciamento delle presenze ci sono limitazioni?}
+			
+			\medskip 
+			
+			L'azienda utilizza un'applicazione per la consuntivazione che è tutta auto-contenuta: all'interno ci sono sia le attività giornaliere su cui si può consuntivare, sia l'operazione di check-in in cui si può specificare anche la sede in cui si è presenti al momento. Quindi il tracciamento è un'attività già inclusa nell'app per la consuntivazione.
+			
+			\bigskip 
+			
+			\item \textbf{Quindi il bot che dobbiamo creare si appoggerebbe su questo sistema già esistente?}
+			
+			\medskip
+			
+			Si, l'azienda ci fornirà un set di API REST definite mediante un file swagger (ovvero un linguaggio che permette la definizione di API REST dandoci il formalismi per definire quali sono i servizi che andiamo ad esporre utilizzando il paradigma REST, quindi quali sono i path esposti, quali sono i vari metodi e così via). Un file swagger si divide in tre parti: 
+			\begin{itemize}
+				\item una parte di metadata che ci dice quali sono le macro categorie di servizi esposti con una descrizione, quali siano le licenze con cui sto esponendo queste API, se lo sto esponendo in http o https, il base path ecc.
+				\item la definizione dei vari servizi esposti: ogni servizio è esposto su un path ed ha associati dei metodi http. [REST: paradigma che ci dice come noi vogliamo accedere a dei servizi visti come risorse. In REST tutto è visto come una risorsa]. REST ci dice che posso accedere a diverse risorse ciascuna delle quali ha associati alcune operazioni. Ogni variazione sul path identifica risorse differenti. Ognuna di queste operazioni restituisce un json di risposta in cui sono contenute informazioni rilevanti per il tipo di operazione.
+				\item una parte di definizione degli oggetti usati dalle varie API: ogni oggetto avrà una serie di caratteristiche
+			\end{itemize} 
+			Quindi un file swagger permette di capire come sono fatte delle API
+			
+			\bigskip 
+			
+			\item \textbf{Per quanto riguarda il requisito opzionale sull'accesso ai documenti: tale accesso dipende dai privilegi del dipendente (e quindi dal suo ruolo all'interno dell'azienda) oppure è una cosa più generica in cui tutti hanno accesso a tutto?}
+			
+			\medskip
+			
+			C'è da considerare che in azienda viene già utilizzato Alfresco, ovvero un sistema documentale in cui l'utente ha associati alcuni ruoli. Di conseguenza, a seconda del ruolo l'utente vede alcune cose o non le vede. Per Alfresco c'è da fare una considerazione: esiste uno standard che si chiama cvis che si occupa della standardizzazione totale dell'accesso documentale, per cui si trovano librerie già pronte che potrebbero aiutare (ad esempio per Java: Apache Chemistry). Per quanto riguarda le scelte tecnologiche, il gruppo è libero di scegliere ciò che vuole.
+			
+			\bigskip 
+			
+			\item \textbf{L'azienda ha qualche preferenza sul tipo di formato dei documenti da consegnare?}
+			
+			\medskip
+			
+			Non ci sono preferenze per quanto riguarda il formato. A livello di progetto software, oltre al codice i documenti di solito consegnati sono:
+			\begin{itemize}
+				\item Analisi funzionale: per descrivere a livello funzionale qual è il progetto, quali sono i requisiti e come funziona;
+				\item Analisi tecnica: per descrivere in dettaglio le parti tecniche 
+				\item Macro schema architetturale: per descrivere com'è fatta l'applicazione 
+				\item analisi degli use case
+				\item manuale d'uso
+			\end{itemize}
+			
+			\bigskip 
+			
+			\item \textbf{Come si gestisce un errore nell'interazione con l'utente come un'incomprensione del messaggio?}
+			
+			\medskip
+			
+			Semplicemente viene restituito all'utente un generico messaggio di errore, un po' come fanno Alexa o Google assistant rispondendo con "Mi dispiace, non ho capito". Sulla gestione degli errori, per quel che sono i casi d'uso, non vi è niente di più complesso: nel nostro caso non è necessaria compensazione in caso di errori. [compensazione: quando succede un errore, si effettua un rollback del sistema per riportarlo allo stato originale]. È sufficiente quindi dare un errore generico all'utente senza preoccuparsi di altro.ù
+			
+			
+			\bigskip 
+			
+			\item \textbf{Consigli o aspettative da questa collaborazione?}
+			
+			\medskip
+			
+			Rigira la risposta in un altro modo: cosa deve aspettarsi il gruppo da Imola?
+			Ci sarà un canale diretto (anche su Telegram) di comunicazione per chiarire dubbi o perplessità. Loro sono disponibili anche a sentirsi periodicamente in stile scrum, anche per eventuali dubbi tecnici o nel caso in cui ci trovassimo bloccati su qualche aspetto. Dall'altro lato, loro si aspettano di vedere un prodotto funzionante.
+			Alcune comunicazioni di massima su chatbot:
+			\begin{itemize}
+				\item usiamo le tecnologie che riteniamo più opportune
+				\item cercando si può trovare un sacco di materiale 
+			\end{itemize}
+		\end{enumerate}
+\end{document}
