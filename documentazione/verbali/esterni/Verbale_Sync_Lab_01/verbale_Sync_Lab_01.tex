@@ -69,7 +69,7 @@
 	\section{Informazioni generali}
 		\subsection{Luogo e data dell'incontro}
 			\begin{itemize}
-				\item \textbf{Luogo}: videoconferenza Zoom;
+				\item \textbf{Luogo}: videoconferenza Google Meet;
 				\item \textbf{Data}: 12-11-2021;
 				\item \textbf{Ora di inizio}: 16:00;
 				\item \textbf{Ora di fine}: 16:40.
@@ -106,7 +106,7 @@
 				
 				\medskip		
 						
-				Viene consigliato di prendere spunto da PayPal o simili: 
+				Viene consigliato di prendere spunto da \textit{PayPal} o simili: 
 				\begin{enumerate}
 					\item L'acquirente apre una contestazione da app mobile oppure con interfaccia lato cliente
 					(autenticandosi con il proprio wallet);
@@ -141,52 +141,60 @@
 				
 				\medskip
 				
-				Sia venditore che acquirente sono in chiaro. Infatti:
 				\begin{itemize}
-					\item Il cliente che compra va sul portale web del venditore 
-					\item Il sito di e-commerce conosce nome, cognome e indirizzo di consegna dell'acquirente dalla
-					registrazione al sito, a prescindere dal servizio.
+					\item Sia venditore che acquirente sono in chiaro. Infatti:
+					\begin{itemize}
+						\item Il cliente che compra va sul portale web del venditore 
+						\item Il sito di e-commerce conosce nome, cognome e indirizzo di consegna dell'acquirente dalla
+						registrazione al sito, a prescindere dal servizio.
+					\end{itemize}
+					\item Nel caso in esame, quindi, si può tenere tutto in chiaro, anche eventuali comunicazioni tra le due
+					parti:
+					\begin{itemize}
+						\item Si esclude la possibilità di dare all'acquirente un modo di comunicare direttamente con il servizio;
+						\item Tale possibilità verrà comunque fornita al venditore (che dovrà iscriversi alla piattaforma per
+						poterla sfruttare).
+					\end{itemize}
+					\item \textbf{OPZIONALE:} si può pensare di implementare una web-app di monitoraggio delle transazioni
+					per l'acquirente;
+					\item Il gruppo aveva pensato ad una soluzione in stile \textit{Amazon-Locker} per garantire una sorta di anonimato per
+					l'acquirente, ma è preferibile rimanere sul semplice e fare tutto in chiaro.
 				\end{itemize}
-				
-				Nel caso in esame, quindi, si può tenere tutto in chiaro, anche eventuali comunicazioni tra le due parti. Si esclude
-				la possibilità di dare all'acquirente un modo di comunicare direttamente con il servizio, che invece
-				viene fornito al venditore (che dovrà iscriversi alla piattaforma per poterla utilizzare). \\
-				\textbf{OPZIONALE:} si può pensare di implementare una web-app di monitoraggio delle transazioni
-				per l'acquirente.
-				
-				Il gruppo aveva pensato ad una soluzione in stile Amazon-Locker per garantire una sorta di anonimato per
-				l'acquirente, ma è preferibile rimanere sul semplice e fare tutto in chiaro.
 				
 				\bigskip
 				
 				\item \textbf{Che politica si applica per resi e rimborsi? E come si può esser sicuri che il venditore, una volta
-				ricevuto il pagamento, non scappi con i soldi? (L'acquirente paga ma il pacco non contiene quello che dovrebbe -
-				Problema del mattone)}
+				ricevuto il pagamento, non scappi con i soldi (L'acquirente paga ma il pacco non contiene quello che dovrebbe -
+				Problema del mattone)?}
 				
 				\medskip
 				
-				\textbf{OPZIONALE:} Si potrebbe procedere così:
+				\begin{itemize}
+					\item \textbf{OPZIONALE:} Si potrebbe procedere nel seguente modo:
 					\begin{enumerate}
 						\item Nel momento dello sblocco del pacco non viene rilasciato tutto l'importo ma solo metà;
 						\item Una volta aperto il pacco e verificato che contiene ciò che deve, viene rilasciato un altro
 						quarto dell'importo totale;
 						\item Quando l'acquirente ha verificato che sia tutto regolare, viene rilasciato l'ultimo quarto.
-					\end{enumerate}   
-				Potrebbero comunque esserci inconvenienti. Ad esempio se l'acquirente sblocca la prima metà e poi non sblocca
-				più niente, i soldi restano fermi sullo smart-contract. \\
-				\underline{Opzione interessante:} dopo qualche settimana avviene uno sblocco automatico del resto dei soldi
-				nel caso in cui non vengano sollevate segnalazioni da parte dell'acquirente (le tempistiche non sono un
-				problema, sarà tutto configurabile).
+					\end{enumerate}
+					\item Potrebbero comunque esserci inconvenienti: ad esempio se l'acquirente sblocca la prima metà e poi non sblocca
+					più niente, i soldi restano fermi sullo smart-contract.
+					\begin{itemize}
+						\item \underline{Opzione interessante:} dopo qualche settimana avviene uno sblocco automatico del resto dei soldi
+						nel caso in cui non vengano sollevate segnalazioni da parte dell'acquirente (le tempistiche non sono un
+						problema, sarà tutto configurabile).
+					\end{itemize}
+				\end{itemize}
 				
 				\bigskip
 				
-				\item \textbf{Come confermare la ricezione? (Ad esempio, se si utilizza la scansione del \texttt{QR code}, cosa
+				\item \textbf{Come confermare la ricezione? (Ad esempio, se si utilizza la scansione del \textit{QR code}, cosa
 				succederebbe se all'arrivo del pacco l'acquirente non avesse la possibilità di fare lo scan per qualche motivo)}
 				
 				\medskip
 				
-				Oltre che usare il \texttt{QR code}, si deve fornire un secondo metodo per la conferma della ricezione, sfruttando il fatto
-				che il \texttt{QR code} è in realtà una stringa: nell'applicazione potrebbe esserci la possibilità di digitare manualmente
+				Oltre che usare il \textit{QR code}, si deve fornire un secondo metodo per la conferma della ricezione, sfruttando il fatto
+				che il \textit{QR code} è in realtà una stringa: nell'applicazione potrebbe esserci la possibilità di digitare manualmente
 				tale stringa (riportata anche sul pacco).
 				
 				\bigskip
@@ -195,10 +203,12 @@
 				
 				\medskip
 				
-				Punto debole: di base il pacco va sbloccato con il wallet dell'acquirente.\\
-				\textbf{OPZIONALE:} Come soluzione si potrebbe creare un meccanismo per dare all'acquirente la possibilità di indicare
-				dei delegati, specificando i loro wallet address.
-				
+				\begin{itemize}
+					\item Punto debole: di base il pacco va sbloccato con il wallet dell'acquirente;
+					\item \textbf{OPZIONALE:} Come soluzione si potrebbe creare un meccanismo per dare all'acquirente la possibilità di indicare
+					dei delegati, specificando i loro wallet address.
+				\end{itemize}
+
 				\bigskip
 				
 				\item \textbf{I componenti del gruppo hanno poca (se non nulla) esperienza con blockchain e cripto valute.
@@ -209,10 +219,12 @@
 				
 				\medskip
 				
-				È possibile tarare il progetto sulle conoscenze dei membri del gruppo, in modo da lavorare sulla parte blockchain
-				il minimo indispensabile (usando possibilmente \texttt{Ethereum}, avente una grande community, e sfruttando
-				materiali forniti dall'azienda).
-				Non sono presenti particolari problemi: per bilanciare il gruppo si potrebbe concentrare di più sulla
-				parte acquirente, dato che la parte blockchain sarebbe un po' più povera.
+				\begin{itemize}
+					\item È possibile tarare il progetto sulle conoscenze dei membri del gruppo, in modo da lavorare sulla parte blockchain
+					il minimo indispensabile (usando possibilmente \textit{Ethereum}, avente una grande community, e sfruttando
+					materiali forniti dall'azienda);
+					\item Non sono presenti particolari problemi: per bilanciare il gruppo si potrebbe concentrare di più sulla
+					parte acquirente, dato che la parte blockchain sarebbe un po' più povera.
+				\end{itemize}
 			\end{enumerate}
 \end{document}
