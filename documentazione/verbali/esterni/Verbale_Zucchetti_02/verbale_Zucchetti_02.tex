@@ -1,0 +1,168 @@
+\documentclass[11pt]{article}
+
+\usepackage[english,italian]{babel}
+\usepackage[a4paper, top=2cm, bottom=1.5cm, left=2cm, right=2cm]{geometry}
+\usepackage{float}
+\usepackage{ltablex}
+\usepackage{titling}
+\usepackage{blindtext}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage[italian]{babel}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage[bottom]{footmisc}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\usepackage{amsmath, amssymb}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{layouts}
+\usepackage{url}
+\usepackage{comment}
+\usepackage{eurosym}
+
+
+
+
+
+
+\begin{document}
+
+	\thispagestyle{empty}
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[scale = 0.05]{../logo_unipd.png}\\
+			\large \textbf{Università degli Studi di Padova} \\
+			\vfill
+			\includegraphics[scale = 0.7]{../logo_small.jpg}\\
+			\large \textbf{Bug Pharma} \\
+			\vfill
+			\large
+			E-mail: 
+			\texttt{bugpharma10@gmail.com}
+			\vfill
+			\Huge \textbf{Verbale esterno del 15-11-2021}\\
+			
+			\large
+			%per verbali esterni
+			\textbf{Zucchetti  S.p.A. - Login warrior}\\ 
+			
+			%per verbali interni
+			%\vfill
+			%\textbf{Ordine del giorno:} \\
+			
+			
+			
+			\vfill
+			
+			
+			\begin{tabular}{r|l}
+				\textbf{Approvazione} &  -\\
+				\textbf{Redazione} &  \parbox[t]{5cm}{Andrea Salmaso \\Nicla Faccioli}\\
+				\textbf{Verifica} &  -\\
+				\textbf{Stato} & Redatto \\
+				\textbf{Uso} & Esterno
+			\end{tabular}
+			\vfill
+			
+		\end{center}
+	\end{titlepage}
+
+	\section{Informazioni generali}
+	\subsection{Luogo e data dell'incontro}
+	\begin{itemize}
+		\item \textbf{Luogo}: videoconferenza Zoom;
+		\item \textbf{Data}: 15-11-2021;
+		\item \textbf{Ora di inizio}: 16:30;
+		\item \textbf{Ora di fine}: 17:00.
+	\end{itemize}
+	
+	\subsection{Presenze}
+	\begin{itemize}
+		\item \textbf{Totale presenze}: 7;
+		\item \textbf{Presenti}:
+		\begin{itemize}
+			\item Lorenzo Piran; 
+			\item Michele Masetto;
+			\item Silvia Giro;
+			\item Nicla Faccioli (segretaria);
+			\item Sara Nanni;
+			\item Andrea Salmaso;
+			\item Nicholas Sertori.
+		\end{itemize}
+		\item \textbf{Assenti}: nessuno.
+		\item \textbf{Partecipanti esterni}: 
+			\begin{itemize}
+				\item Gregorio Piccoli (Zucchetti S.p.A.)
+			\end{itemize}
+	\end{itemize}
+
+	\newpage
+
+	\section{Domande e risposte}
+		\begin{enumerate}
+			\item \textbf{Per chi è pensato il sito/progetto? Per uso interno all’azienda Zucchetti o è destinato ad essere distribuito anche ad altre aziende?} 
+			
+			\medskip
+			
+			È complicato fare un prodotto completo. L'idea è di creare qualcosa che possa usare il data analyst che controlla i risultati di un monitoraggio. Per ora i dati vengono caricati con un file csv e poi lo consulta per avere un'intuizione se le cose stanno andando bene o no. Ci vengono mostrati i sistemi di monitoraggio del sistema di fatturazione elettronica già in utilizzo alla Zucchetti. Il sistemista che sta guardando questa dashboard e nota qualche attività sospetta può entrare in una dashboard più specifica per visualizzare dettagli e capire meglio la situazione. Il nostro sistema diventerebbe un'integrazione al sistema già esistente per il controllo dei dati di login già arrivati da altre fonti. 
+			Notare che esistono due tipi di dati di login: dati storici che servono come riferimento e che vengono mixati con i dati del momento. I dati attuali vanno confrontati con i dati storici per capire il contesto (es: applicazione usata in tutto il mondo o solo in Italia. Gli orari cambiano) .
+			
+			\bigskip
+			
+			\item \textbf{Quindi il nostro prodotto verrà usato solo da utenti specifici, ovvero questi analisti che si occupano di analizzare i dati?}
+			
+			\medskip
+			
+			Sì, sono analisti ma non bisogna fare assunzioni sulla loro preparazione: potrebbero anche essere dei dipendenti che stanno imparando. Sono utenti esperti ma dobbiamo comunque fare un prodotto usabile (no riga di comando insomma).
+			
+			\bigskip 
+			
+			\item \textbf{Bisogna sviluppare un Applicativo Web. Essendo probabilmente ad uso interno, è prevedibile l’implementazione di un sistema di login?}
+			
+			\medskip
+			
+			Chiaramente c'è tutto un discorso di sicurezza ma non è il tema centrale. Lasciamo perdere questo aspetto, è troppo ampio. Il tema da sviluppare è l'analisi dei dati.
+			
+			\bigskip
+			
+			\item \textbf{Per la costruzione del sito, ci si può basare su qualche framework già essitente [es. Laravel (PHP), Angular (JavaScript), Node.me (backend JavaScript), React (JavaScript anche se penso sia più per mobile), Spring (Java che permette anche Web App ma forse è troppo per quel che dobbiamo fare)]?}
+			
+			\medskip
+			
+			La decisione spetta a noi. Possiamo usare quello che vogliamo ma di base il discorso è di tipo diverso: noi dobbiamo creare un prodotto che deve durare lo spazio del nostro esame, quindi va bene usare anche un framework qualunque. Quello che succede è che spesso questi framework durano meno delle applicazioni di questo tipo (gestionali), che di solito durano anche 20 anni. Quindi bisogna avere un fortissimo controllo perché altrimenti questi framework inducono un enorme debito tecnico. Nel nostro caso possiamo usare quello che vogliamo: se cerchiamo qualcosa di molto neutro possiamo usare jQuery (piccola estensione a HTML e lo organizza un po'). React e Angular invece sono fortemente impattanti, che ci costringono a seguire la loro volontà. Chiaramente i framework aiutano moltissimo ma inducono anche un forte lock-in, quindi da evitare per prodotti destinati a durare per molto tempo, ma non è il nostro caso. Valutiamo noi: usiamo qualcosa che conosciamo, per non passare settimane a studiare il framework che abbiamo scelto. In ogni caso, non scegliam framework strani poco documentati. Se dobbiamo usarne uno restiamo sui classici: React, Vue, Angular, Svelte.
+			
+			\bigskip
+			
+			\item \textbf{Le librerie fornite per la riduzione dimensionale in che linguaggio sono scritte? Vengono applicate lato server?}
+			
+			\medskip
+			
+			Sono tutte scritte in JavaScript e vengono applicate lato browser. Per la riduzione dimensionale c'è la libreria fornita da Zucchetti, ma volendo si può usare anche DruidJS (usata nel progetto dello scorso anno). Comunque tutto JavaScript
+			
+			\bigskip
+			
+			\item \textbf{Nel caso avessimo bisogno di aiuto per quanto riguarda D3.js o gli algoritmi di ML, a chi dovremmo rivolgerci? sempre a Gregorio Piccoli?}
+			
+			\medskip
+			
+			Rivolgersi sempre a Gregorio Piccoli
+			
+			\bigskip
+			
+			\item \textbf{Quale potrebbe essere una durata approssimativa di un progetto di questo tipo o una possibile data di fine approssimativa? }
+			
+			\medskip
+			
+			Di solito questi progetti finiscono verso fine Aprile/Maggio, anche se quest'anno sono cambiate le cose. Comunque la durata dovrebbe essere indicativamente ancora la stessa degli anni scorsi. Una stima ragionevole potrebbe essere che questo lavoro finisca verso i primi di Maggio.
+			(Qui ha detto un po' di cose sul corso di studi e le scadenze di laurea ma non le ho riportate perché niente di importante per il progetto)
+			
+		\end{enumerate}
+	
+\end{document}
