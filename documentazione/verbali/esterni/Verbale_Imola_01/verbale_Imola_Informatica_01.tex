@@ -28,43 +28,30 @@
 \usepackage{eurosym}
 
 
-
-
-
-
 \begin{document}
 
 	\thispagestyle{empty}
 	\begin{titlepage}
 		\begin{center}
-			\includegraphics[scale = 0.05]{../../logo_unipd.png}\\
+			\includegraphics[scale = 0.05]{../../Res/logo_unipd.png}\\
+			\bigskip
 			\large \textbf{Università degli Studi di Padova} \\
 			\vfill
-			\includegraphics[scale = 0.7]{../../logo_small.jpg}\\
-			\large \textbf{Bug Pharma} \\
+			\includegraphics[scale = 0.7]{../../Res/BugPharma_Logo.png}\\
+			\huge \textbf{Gruppo Bug Pharma} \\
 			\vfill
-			\large
-			E-mail: 
-			\texttt{bugpharma10@gmail.com}
+			\large \texttt{bugpharma10@gmail.com}
 			\vfill
 			\Huge \textbf{Verbale esterno del 16-11-2021}\\
 			
 			\large
-			%per verbali esterni
-			\textbf{Imola informatica - Bot4Me}\\ 
-			
-			%per verbali interni
-			%\vfill
-			%\textbf{Ordine del giorno:} \\
-			
 			
 			
 			\vfill
 			
-			
 			\begin{tabular}{r|l}
 				\textbf{Approvazione} &  -\\
-				\textbf{Redazione} &  \parbox[t]{5cm}{Andrea Salmaso \\Nicla Faccioli}\\
+				\textbf{Redazione} &  \parbox[t]{3.5cm}{Andrea Salmaso \\Nicla Faccioli}\\
 				\textbf{Verifica} &  -\\
 				\textbf{Stato} & Redatto \\
 				\textbf{Uso} & Esterno
@@ -73,6 +60,8 @@
 			
 		\end{center}
 	\end{titlepage}
+
+	\newpage
 
 	\section{Informazioni generali}
 	\subsection{Luogo e data dell'incontro}
@@ -108,7 +97,7 @@
 
 	\newpage
 
-	\section{Punti salienti}
+	\section{Domande e risposte}
 		\begin{enumerate}
 			\item \textbf{Il resoconto delle attività fatto dai dipendenti è vincolato dal timbro di entrata? Deve
 			essere effettuato obbligatoriamente prima del timbro di uscita?}
@@ -120,7 +109,7 @@
 				\begin{itemize}
 					\item Non si tratta di un'attività giornaliera, ma ogni dipendente può effettuarla con cadenze differenti,
 					a propria discrezione;
-					\item Dipende dalle regole dell'azienda: ad Imola non vi è un orario di ingresso o un cartellino
+					\item Dipende dalle regole dell'azienda: ad Imola Informatica non vi è un orario di ingresso o un cartellino
 					da timbrare, per cui non vi sono obblighi in questo senso.
 				\end{itemize}
 			\end{itemize}
@@ -130,10 +119,15 @@
 			\item \textbf{Per quanto riguarda la gestione della presenza in sede e il tracciamento delle presenze ci sono
 			limitazioni?}
 			
-			\medskip 
+			\medskip
 			
-			L'azienda utilizza un'applicazione per la consuntivazione completamente auto-contenuta:
-			all'interno ci sono sia le attività giornaliere su cui si può consuntivare, sia l'operazione di check-in in cui si può specificare anche la sede in cui si è presenti al momento. Quindi il tracciamento è un'attività già inclusa nell'app per la consuntivazione.
+			L'azienda utilizza un'applicazione per la consuntivazione completamente auto-contenuta al cui interno:
+			\begin{itemize}
+				\item Sono presenti le attività giornaliere su cui si può consuntivare;
+				\item È possibile effettuare l'operazione di check-in in cui si può specificare anche la sede in cui
+				si è presenti al momento.
+			\end{itemize}
+			Quindi il tracciamento è un'attività già inclusa nella suddetta.
 			
 			\bigskip 
 			
@@ -141,21 +135,59 @@
 			
 			\medskip
 			
-			Si, l'azienda ci fornirà un set di API REST definite mediante un file swagger (ovvero un linguaggio che permette la definizione di API REST dandoci il formalismi per definire quali sono i servizi che andiamo ad esporre utilizzando il paradigma REST, quindi quali sono i path esposti, quali sono i vari metodi e così via). Un file swagger si divide in tre parti: 
 			\begin{itemize}
-				\item una parte di metadata che ci dice quali sono le macro categorie di servizi esposti con una descrizione, quali siano le licenze con cui sto esponendo queste API, se lo sto esponendo in http o https, il base path ecc.
-				\item la definizione dei vari servizi esposti: ogni servizio è esposto su un path ed ha associati dei metodi http. [REST: paradigma che ci dice come noi vogliamo accedere a dei servizi visti come risorse. In REST tutto è visto come una risorsa]. REST ci dice che posso accedere a diverse risorse ciascuna delle quali ha associati alcune operazioni. Ogni variazione sul path identifica risorse differenti. Ognuna di queste operazioni restituisce un json di risposta in cui sono contenute informazioni rilevanti per il tipo di operazione.
-				\item una parte di definizione degli oggetti usati dalle varie API: ogni oggetto avrà una serie di caratteristiche
-			\end{itemize} 
-			Quindi un file swagger permette di capire come sono fatte delle API
+				\item L'azienda fornirà un set di API \textit{REST} definite mediante un file \textit{Swagger};
+				\item È stato illustrato brevemente dal proponente il funzionamento di un file \textit{Swagger}:
+				\begin{itemize}
+					\item È un linguaggio che permette la definizione di API \textit{REST}, fornendo i formalismi per la
+					definizione	dei servizi da esporre utilizzando il paradigma \textit{REST} (path esposti, metodi e così via);
+					\item Un file \textit{Swagger} si divide in tre parti: 
+					\begin{itemize}
+						\item Una parte di metadata atta ad indicare:
+						\begin{itemize}
+							\item Quali sono le macro categorie di servizi esposti, attraverso una loro descrizione;
+							\item Quali sono le licenze con cui si stanno esponendo le suddette API
+							(\textit{http} o \textit{https}, base path ecc.).
+						\end{itemize}
+						\item La definizione dei vari servizi esposti:
+						\begin{itemize}
+							\item Ogni servizio è esposto su un path ed ha associati dei metodi \textit{http};
+							\item \textit{REST} indica che è possibile accedere a diverse risorse, ciascuna delle quali ha
+							associate alcune operazioni;
+							\item  Ogni operazione restituisce un \texttt{json} di risposta in cui sono contenute informazioni
+							rilevanti per il tipo di operazione;
+							\item Ogni variazione sul path identifica una risorsa differente.
+						\end{itemize}												
+						\item Una parte di definizione degli oggetti usati dalle varie API:
+						\begin{itemize}
+							\item Ogni oggetto avrà una serie di caratteristiche.
+						\end{itemize}												
+					\end{itemize} 
+				\end{itemize}
+			\end{itemize}
+			
+			
 			
 			\bigskip 
 			
-			\item \textbf{Per quanto riguarda il requisito opzionale sull'accesso ai documenti: tale accesso dipende dai privilegi del dipendente (e quindi dal suo ruolo all'interno dell'azienda) oppure è una cosa più generica in cui tutti hanno accesso a tutto?}
+			\item \textbf{Per quanto riguarda il requisito opzionale sull'accesso ai documenti: tale accesso dipende dai
+			privilegi del dipendente (e quindi dal suo ruolo all'interno dell'azienda) oppure è una cosa più generica in cui tutti
+			hanno accesso a tutto?}
 			
 			\medskip
 			
-			C'è da considerare che in azienda viene già utilizzato Alfresco, ovvero un sistema documentale in cui l'utente ha associati alcuni ruoli. Di conseguenza, a seconda del ruolo l'utente vede alcune cose o non le vede. Per Alfresco c'è da fare una considerazione: esiste uno standard che si chiama cvis che si occupa della standardizzazione totale dell'accesso documentale, per cui si trovano librerie già pronte che potrebbero aiutare (ad esempio per Java: Apache Chemistry). Per quanto riguarda le scelte tecnologiche, il gruppo è libero di scegliere ciò che vuole.
+			\begin{itemize}
+				\item In azienda viene già utilizzato \textit{Alfresco} un sistema documentale in cui l'utente ha associati
+				alcuni ruoli;
+				\item A seconda del ruolo l'utente vede o non vede alcune cose;
+				\item Per quanto riguarda \textit{Alfresco}:
+				\begin{itemize}
+					\item Lo standard \textit{CIVIS} si occupa della standardizzazione totale dell'accesso documentale;
+					\item È possibile trovare librerie già pronte che potrebbero tornare utili (es.: \textit{Apache Chemistry}
+					per \textit{Java}.
+				\end{itemize}
+				\item Per quanto riguarda le scelte tecnologiche, il gruppo è libero di scegliere ciò che vuole.
+			\end{itemize}
 			
 			\bigskip 
 			
@@ -163,36 +195,64 @@
 			
 			\medskip
 			
-			Non ci sono preferenze per quanto riguarda il formato. A livello di progetto software, oltre al codice i documenti di solito consegnati sono:
 			\begin{itemize}
-				\item Analisi funzionale: per descrivere a livello funzionale qual è il progetto, quali sono i requisiti e come funziona;
-				\item Analisi tecnica: per descrivere in dettaglio le parti tecniche 
-				\item Macro schema architetturale: per descrivere com'è fatta l'applicazione 
-				\item analisi degli use case
-				\item manuale d'uso
+				\item Non ci sono preferenze per quanto riguarda il formato;
+				\item A livello di progetto software, oltre al codice i documenti solitamente consegnati sono:
+				\begin{itemize}
+					\item Analisi funzionale: per descrivere a livello funzionale qual è il progetto, quali sono i requisiti e come funziona;
+					\item Analisi tecnica: per descrivere in dettaglio le parti tecniche;
+					\item Macro schema architetturale: per descrivere com'è fatta l'applicazione;
+					\item Analisi degli use case;
+					\item Manuale d'uso.
+				\end{itemize}
 			\end{itemize}
-			
-			\bigskip 
+
+			\bigskip
 			
 			\item \textbf{Come si gestisce un errore nell'interazione con l'utente come un'incomprensione del messaggio?}
 			
 			\medskip
 			
-			Semplicemente viene restituito all'utente un generico messaggio di errore, un po' come fanno Alexa o Google assistant rispondendo con "Mi dispiace, non ho capito". Sulla gestione degli errori, per quel che sono i casi d'uso, non vi è niente di più complesso: nel nostro caso non è necessaria compensazione in caso di errori. [compensazione: quando succede un errore, si effettua un rollback del sistema per riportarlo allo stato originale]. È sufficiente quindi dare un errore generico all'utente senza preoccuparsi di altro.ù
-			
-			
+			\begin{itemize}
+				\item Viene restituito all'utente un generico messaggio di errore (come fanno \textit{Alexa} o \textit{Google Assistant});
+				\item Non è necessaria compensazione (rollback del sistema per riportarlo allo stato originale) in caso di errori.
+			\end{itemize}
+
 			\bigskip 
 			
 			\item \textbf{Consigli o aspettative da questa collaborazione?}
 			
 			\medskip
-			
-			Rigira la risposta in un altro modo: cosa deve aspettarsi il gruppo da Imola?
-			Ci sarà un canale diretto (anche su Telegram) di comunicazione per chiarire dubbi o perplessità. Loro sono disponibili anche a sentirsi periodicamente in stile scrum, anche per eventuali dubbi tecnici o nel caso in cui ci trovassimo bloccati su qualche aspetto. Dall'altro lato, loro si aspettano di vedere un prodotto funzionante.
-			Alcune comunicazioni di massima su chatbot:
+
 			\begin{itemize}
-				\item usiamo le tecnologie che riteniamo più opportune
-				\item cercando si può trovare un sacco di materiale 
+				\item La risposta è stata riformulata dal proponente in: "Cosa deve aspettarsi il gruppo da Imola?":
+				\begin{itemize}
+					\item Verrà messo a disposizione un canale diretto di comunicazione per chiarire dubbi o perplessità (anche su
+					\textit{Telegram});
+					\item L'azienda rimane disponibile per meeting periodici in stile \textit{scrum}, anche per eventuali dubbi tecnici
+					o nel caso in cui il gruppo si trovasse bloccato su qualche aspetto.
+				\end{itemize}
+				\item Dall'altro lato, il proponente si aspetta di vedere un prodotto funzionante.
+				\item Sono state fornite altre generiche informazioni sul chatbot:
+				\begin{itemize}
+					\item Usare le tecnologie che si ritengono più opportune;
+					\item Cercare materiale in autonomia, facilmente recuperabile.
+				\end{itemize}
+				\item Sono stati forniti alcuni collegamenti utili a varie risorse:
+				\begin{itemize}
+					\item Strumenti:
+					\begin{itemize}
+						\item \href{https://editor.swagger.io/}{\texttt{Swagger}};
+						\item \href{https://chemistry.apache.org/}{\texttt{Apache Chemistry}};
+						\item \href{https://www.datacamp.com/community/tutorials/building-a-chatbot-using-chatterbot}{\texttt{Chatterbot}};
+					\end{itemize}
+					\item Contatti:
+					\begin{itemize}
+						\item \href{https://t.me/aleproscia}{\texttt{Alessandro Poscia (Telegram)}};
+						\item \href{https://t.me/giacomolorenzo}{\texttt{Giacomo Lorenzo (Telegram)}}.
+					\end{itemize}
+				\end{itemize}
 			\end{itemize}
 		\end{enumerate}
+		
 \end{document}
