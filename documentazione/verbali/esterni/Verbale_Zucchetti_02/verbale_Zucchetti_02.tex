@@ -37,10 +37,10 @@
 	\thispagestyle{empty}
 	\begin{titlepage}
 		\begin{center}
-			\includegraphics[scale = 0.05]{../logo_unipd.png}\\
+			\includegraphics[scale = 0.05]{../../logo_unipd.png}\\
 			\large \textbf{Università degli Studi di Padova} \\
 			\vfill
-			\includegraphics[scale = 0.7]{../logo_small.jpg}\\
+			\includegraphics[scale = 0.7]{../../logo_small.jpg}\\
 			\large \textbf{Bug Pharma} \\
 			\vfill
 			\large
@@ -99,7 +99,7 @@
 		\item \textbf{Assenti}: nessuno.
 		\item \textbf{Partecipanti esterni}: 
 			\begin{itemize}
-				\item Gregorio Piccoli (Zucchetti S.p.A.)
+				\item Gregorio Piccoli (Zucchetti S.p.A.).
 			\end{itemize}
 	\end{itemize}
 
@@ -107,62 +107,130 @@
 
 	\section{Domande e risposte}
 		\begin{enumerate}
-			\item \textbf{Per chi è pensato il sito/progetto? Per uso interno all’azienda Zucchetti o è destinato ad essere distribuito anche ad altre aziende?} 
+			\item \textbf{Per chi è pensato il sito/progetto? Per uso interno all'azienda Zucchetti o è destinato
+			ad essere distribuito anche ad altre aziende?} 
 			
 			\medskip
 			
-			È complicato fare un prodotto completo. L'idea è di creare qualcosa che possa usare il data analyst che controlla i risultati di un monitoraggio. Per ora i dati vengono caricati con un file csv e poi lo consulta per avere un'intuizione se le cose stanno andando bene o no. Ci vengono mostrati i sistemi di monitoraggio del sistema di fatturazione elettronica già in utilizzo alla Zucchetti. Il sistemista che sta guardando questa dashboard e nota qualche attività sospetta può entrare in una dashboard più specifica per visualizzare dettagli e capire meglio la situazione. Il nostro sistema diventerebbe un'integrazione al sistema già esistente per il controllo dei dati di login già arrivati da altre fonti. 
-			Notare che esistono due tipi di dati di login: dati storici che servono come riferimento e che vengono mixati con i dati del momento. I dati attuali vanno confrontati con i dati storici per capire il contesto (es: applicazione usata in tutto il mondo o solo in Italia. Gli orari cambiano) .
+			\begin{itemize}
+				\item È complicato fare un prodotto completo, l'idea principale è:
+				\begin{itemize}
+					\item Poter caricare i dati contenuti nel file \texttt{CSV};
+					\item Creare qualcosa che possa essere usato dal data analyst per controllare i risultati del monitoraggio
+					e valutare se le cose stanno andando bene o no.
+				\end{itemize}
+				\item È stata mostrata dal proponente una dashboard di monitoraggio del sistema di fatturazione elettronica
+				attualmente in uso all'interno dell'azienda:
+				\begin{itemize}
+					\item Nel visionarla, il sistemista, in caso di attività sospetta, ha la possibilità di accedere ad una
+					dashboard più specifica	per visualizzarne i dettagli e comprendere meglio la situazione.
+				\end{itemize}
+				\item Il sistema da progettare diventerebbe un'integrazione al sistema già esistente per il controllo dei dati
+				di login già ottenuti da altre fonti;
+				\item È stata fatta notare dal proponente l'esistenza di due tipi di dati di login:
+				\begin{itemize}
+					\item I dati storici, da utilizzare come riferimento;
+					\item I dati attuali, da mixare ai dati storici.
+				\end{itemize}
+				È necessario confrontare i dati attuali con i dati storici per comprendere il contesto (es: gli orari potrebbero
+				cambiare in base al paese e al fuso orario).
+			\end{itemize}
 			
 			\bigskip
 			
-			\item \textbf{Quindi il nostro prodotto verrà usato solo da utenti specifici, ovvero questi analisti che si occupano di analizzare i dati?}
+			\item \textbf{Quindi il nostro prodotto verrà usato solo da utenti specifici, ovvero questi analisti che si occupano
+			di analizzare i dati?}
 			
 			\medskip
 			
-			Sì, sono analisti ma non bisogna fare assunzioni sulla loro preparazione: potrebbero anche essere dei dipendenti che stanno imparando. Sono utenti esperti ma dobbiamo comunque fare un prodotto usabile (no riga di comando insomma).
+			\begin{itemize}
+				\item L'utenza principale sarà costituita da analisti;
+				\item Non bisogna fare assunzioni sulla loro preparazione: potrebbero essere anche dipendenti che stanno imparando;
+				\item È comunque necessario fare un prodotto usabile (es: no riga di comando).
+			\end{itemize}
 			
 			\bigskip 
 			
-			\item \textbf{Bisogna sviluppare un Applicativo Web. Essendo probabilmente ad uso interno, è prevedibile l’implementazione di un sistema di login?}
+			\item \textbf{Bisogna sviluppare un Applicativo Web. Essendo probabilmente ad uso interno, è prevedibile
+			l'implementazione di un sistema di login?}
 			
 			\medskip
+			\begin{itemize}
+				\item L'argomento sicurezza non costituisce il tema centrale del progetto;
+				\item Aspetto troppo ampio, è conveniente non trattarlo per una questione di tempo;
+				\item Il tema da sviluppare è l'analisi dei dati.
+			\end{itemize}
+			  
+			\bigskip
 			
-			Chiaramente c'è tutto un discorso di sicurezza ma non è il tema centrale. Lasciamo perdere questo aspetto, è troppo ampio. Il tema da sviluppare è l'analisi dei dati.
+			\item \textbf{Per la costruzione del sito ci si può basare su qualche framework già essitente?}
+			
+			\medskip
+			\begin{itemize}
+				\item La decisione spetta al gruppo;
+				\item È possibile utilizzare lo strumento che si preferisce, la questione è però di tipo diverso:
+				\begin{itemize}
+					\item Ai fini del progetto è considerabile l'utilizzo di un framework qualunque;
+					\item Concretamente, spesso tali framework hanno una dura di vita inferiore a quella di applicazioni
+					gestionali come quella oggetto del capitolato (che può giungere e superare i vent'anni):
+					\begin{itemize}
+						\item È necessario un fortissimo controllo per evitare un enorme debito tecnico in futuro.
+					\end{itemize}
+				\end{itemize}
+				\item Nel caso in cui il gruppo decidesse di farne uso:
+				\begin{itemize}
+					\item Valutare \texttt{jQuery}, abbastanza neutro;
+					\item \textbf{React} e \texttt{Angular} risulterebbero essere troppo impattanti, costringendo a
+					seguire "la loro volontà";
+					\item Consigliabile usarne di già familiari ai membri del gruppo, per evitare di impiegare troppo
+					tempo al loro studio;
+					\item Consigliabile usarne di conosciuti, con una buona documentazione:
+					\begin{itemize}
+						\item \texttt{React};
+						\item \texttt{VUE};
+						\item \texttt{Angular};
+						\item \texttt{Svelte}.
+					\end{itemize}
+				\end{itemize}
+			\end{itemize}
 			
 			\bigskip
 			
-			\item \textbf{Per la costruzione del sito, ci si può basare su qualche framework già essitente [es. Laravel (PHP), Angular (JavaScript), Node.me (backend JavaScript), React (JavaScript anche se penso sia più per mobile), Spring (Java che permette anche Web App ma forse è troppo per quel che dobbiamo fare)]?}
+			\item \textbf{Le librerie fornite per la riduzione dimensionale in che linguaggio sono scritte? Vengono applicate
+			lato server?}
 			
 			\medskip
 			
-			La decisione spetta a noi. Possiamo usare quello che vogliamo ma di base il discorso è di tipo diverso: noi dobbiamo creare un prodotto che deve durare lo spazio del nostro esame, quindi va bene usare anche un framework qualunque. Quello che succede è che spesso questi framework durano meno delle applicazioni di questo tipo (gestionali), che di solito durano anche 20 anni. Quindi bisogna avere un fortissimo controllo perché altrimenti questi framework inducono un enorme debito tecnico. Nel nostro caso possiamo usare quello che vogliamo: se cerchiamo qualcosa di molto neutro possiamo usare jQuery (piccola estensione a HTML e lo organizza un po'). React e Angular invece sono fortemente impattanti, che ci costringono a seguire la loro volontà. Chiaramente i framework aiutano moltissimo ma inducono anche un forte lock-in, quindi da evitare per prodotti destinati a durare per molto tempo, ma non è il nostro caso. Valutiamo noi: usiamo qualcosa che conosciamo, per non passare settimane a studiare il framework che abbiamo scelto. In ogni caso, non scegliam framework strani poco documentati. Se dobbiamo usarne uno restiamo sui classici: React, Vue, Angular, Svelte.
+			\begin{itemize}
+				\item Sono tutte scritte in \texttt{JavaScript} e vengono applicate lato browser;
+				\item Per la riduzione dimensionale è possibile usare:
+				\begin{itemize}
+					\item La libreria fornita dall'azienda;
+					\item \texttt{DruidJS} (utilizzata nel progetto proposto lo scorso anno).
+				\end{itemize}
+			\end{itemize}
 			
 			\bigskip
 			
-			\item \textbf{Le librerie fornite per la riduzione dimensionale in che linguaggio sono scritte? Vengono applicate lato server?}
+			\item \textbf{Nel caso avessimo bisogno di consigli per quanto riguarda la libreria \texttt{D3.js} o gli
+			algoritmi di ML, a chi sarebbe utile rivolgersi?}
 			
 			\medskip
 			
-			Sono tutte scritte in JavaScript e vengono applicate lato browser. Per la riduzione dimensionale c'è la libreria fornita da Zucchetti, ma volendo si può usare anche DruidJS (usata nel progetto dello scorso anno). Comunque tutto JavaScript
+			È possibile rivolgersi sempre al referente di Zucchetti S.p.A., Gregorio Piccoli.
 			
 			\bigskip
 			
-			\item \textbf{Nel caso avessimo bisogno di aiuto per quanto riguarda D3.js o gli algoritmi di ML, a chi dovremmo rivolgerci? sempre a Gregorio Piccoli?}
+			\item \textbf{Quale potrebbe essere una durata approssimativa di un progetto di questo tipo o una possibile data di
+			fine approssimativa? }
 			
 			\medskip
 			
-			Rivolgersi sempre a Gregorio Piccoli
-			
-			\bigskip
-			
-			\item \textbf{Quale potrebbe essere una durata approssimativa di un progetto di questo tipo o una possibile data di fine approssimativa? }
-			
-			\medskip
-			
-			Di solito questi progetti finiscono verso fine Aprile/Maggio, anche se quest'anno sono cambiate le cose. Comunque la durata dovrebbe essere indicativamente ancora la stessa degli anni scorsi. Una stima ragionevole potrebbe essere che questo lavoro finisca verso i primi di Maggio.
-			(Qui ha detto un po' di cose sul corso di studi e le scadenze di laurea ma non le ho riportate perché niente di importante per il progetto)
-			
+			\begin{itemize}
+				\item In genere la data di fine progetto ricade verso fine Aprile/Maggio, anche se quest'anno sono cambiate le cose;
+				\item Una stima ragionevole potrebbe essere per i primi di Maggio, dipende molto dal gruppo.
+			\end{itemize}
+
 		\end{enumerate}
-	
+		
 \end{document}
