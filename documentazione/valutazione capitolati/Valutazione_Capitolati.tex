@@ -1,4 +1,6 @@
 \documentclass[11pt]{article}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
 
 \usepackage[english,italian]{babel}
 \usepackage[a4paper, top=2cm, bottom=1.5cm, left=2cm, right=2cm]{geometry}
@@ -21,17 +23,12 @@
 \usepackage[bottom]{footmisc}
 \usepackage{fancyhdr}
 \usepackage{titlesec}
-\setcounter{secnumdepth}{4}
 \usepackage{amsmath, amssymb}
 \usepackage{array}
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{comment}
 \usepackage{eurosym}
-
-\title{Valutazione Capitolati}
-\author{BugPharma }
-\date{14 November 2021}
 
 
 \begin{document}
@@ -48,16 +45,14 @@
 			\vfill
 			\large \texttt{bugpharma10@gmail.com}
 			\vfill
-			\Huge \textbf{Valutazione Capitolati 2020/2021}\\
-			
-			\large
-			
+			\Huge \textbf{Valutazione Capitolati 2021/2022}\\
 			
 			\vfill
 			
+			\large
 			\begin{tabular}{r|l}
 				\textbf{Approvazione} &  -\\
-				\textbf{Redazione} &  \parbox[t]{3.5cm}{Lorenzo Piran \\Michele Masetto \\ Sara Nanni}\\
+				\textbf{Redazione} &  \parbox[t]{3.5cm}{Lorenzo Piran \\ Michele Masetto \\ Sara Nanni \\ Andrea Salmaso}\\
 				\textbf{Verifica} &  -\\
 				\textbf{Stato} & Redatto \\
 				\textbf{Uso} & Esterno
@@ -67,57 +62,72 @@
 		\end{center}
 	\end{titlepage}
 
-\maketitle
-
 \tableofcontents
+
 \newpage
 
-\section{Capitolato C5}
-    \subsection{Info sul Capitolato} Info sul capitolato
+
+\section{Valutazione del capitolato scelto}
+\subsection{Capitolato C5 - Login Warrior}
+
+    \subsubsection{Informazioni generali}
     \begin{itemize}
-        \item \textbf{Nome}: Login Warrior, riconoscere e visualizzare i tentativi di accesso non autorizzati
-        \item \textbf{Proponente}: Zucchetti S.p.A
-        \item \textbf{Committente}: Prof. Tullio Vardanega e Prof. Riccardo Cardin
+        \item \textbf{Nome}: Login Warrior;
+        \item \textbf{Proponente}: Zucchetti S.p.A.;
+        \item \textbf{Committente}: Prof. Tullio Vardanega e Prof. Riccardo Cardin.
     \end{itemize}
-    \subsection{Descrizione} Descrizione
     
-    Lo scopo di questo capitolato, proposto dalla Zucchetti S.p.A, è quello di predisporre e fornire la realizzazione di un'applicazione di visualizzazione dei dati di login a supporto della fase di riconoscimento e distinzione di attività lecite o attività illecite, che possono essere svolte all'interno di un nostro portale.
+    \subsubsection{Descrizione}
+    Il capitolato ha per oggetto l'affidamento della fornitura per la realizzazione di un'applicazione di visualizzazione di dati di
+    login a supporto della fase esplorativa (\textit{EDA}) del riconoscimento e distinzione di attività lecite o illecite che possono
+    essere svolte all'interno delle procedure cloud fornite dall'azienda ai propri clienti.
     
-    Per poter quindi fornire ausilio a chiunque voglia per, da un insieme di dati e informazioni contenute in un CSV, risalire a grafici e dataset in grado di predisporre un immediato riscontro visivo della presenza o meno di attività illecite.
+    Tale applicazione fornirà quindi ausilio ai data analyst, i quali, partendo da un insieme di dati contenuti in un file
+    \texttt{CSV}, potranno risalire a grafici e dataset che forniranno un immediato riscontro visivo sulla presenza o meno di attività
+    illecite.
     
-    \subsection{Studio del Dominio} Studio del Dominio
-        \subsubsection{Dominio Applicativo} Dominio Applicativo
+    \subsubsection{Dominio}
+        \paragraph{Dominio Applicativo}~\\
         
-        Il capitolato si colloca nell'ambito della creazione di grafici e dataset da dati presenti in un CSV. Gli utenti finali sono quindi amministratori di sitemi esposti sul web in cui è possibile autenticarsi per poter usufruire dei servizi cloud messi a disposizione dalla piattaforma web.
-        \subsubsection{Dominio Tecnologico} Dominio Tecnologico
+        \noindent
+        Il capitolato si colloca nell'ambito della creazione di un applicativo web che permetta l'importazione di dataset presenti in
+        file \texttt{CSV} e la visualizzazione di varie tipologie di grafico basate su di essi.
+        Gli utenti finali sono quindi data analyst che analizzeranno gli accessi alle procedure cloud messe a disposizione dall'azienda.
         
-        Per lo svolgimento del capitolato e per la creazione dell'applicatovo web viene richiesta la conoscenza dell'ambito web, con lo scopo di creare un'interfaccia piacevole e intuitiva:
+        \paragraph{Dominio Tecnologico}~\\
+        
+        \noindent
+        Per lo svolgimento del capitolato e per la creazione dell'applicativo web vengono richieste conoscenze in ambito web, in
+        particolare:
         \begin{itemize}
             \item \textit{HTML}: per la struttura ed il markup della pagina;
             \item \textit{CSS}: per la presentazione visiva dell'applicativo web;
             \item \textit{JavaScript}: per il comportamento e il trattamento dei dati;
-            \item \textit{D3.js}: libreria, Javascript per la manipolazione di documetni basati sui dati;
-            \item \textit{Git}: per il versionamento dell'applicativo.
+            \item \textit{D3.js}: libreria \textit{JavaScript} per la manipolazione di documenti basati sui dati;
         \end{itemize}
     
-    \subsection{Motivazione della scelta} Motivazione della scelta
-        \subsubsection{Pro} Pro
+    \subsubsection{Motivazione della scelta}
+        \paragraph{Aspetti positivi}
         \begin{itemize}
-            \item Le tecnologie e la libreria proposta dalla Zucchetti S.p.A sono strumenti molto diffusi e utilizzati nell'ambito della gestione e presentazione dei dati, in più la documentazione è molto diffusa e esaustiva;
-            \item La disponibilità mostrata dall'azienda e la voglia di aiutarci e collaborare con noi, mostrandoci quanto effettivamente un nostro risultato positivo possa essere poi effettivamente utilizzato;
-            \item Possibilità di ottenre nuove conoscenze molto spendibili poi in futuro nel mondo del lavoro;
-            \item Riuscire ad applicare gli insegnamenti avuti dal corso di Tecnologie web.
+            \item Le tecnologie e la libreria proposta da Zucchetti S.p.A sono strumenti molto diffusi e utilizzati nell'ambito della
+            gestione e presentazione dei dati, con conseguente esaustività della documentazione;
+            \item Consistente set di dati su cui effettuare test;
+            \item Disponibilità mostrata dall'azienda all'aiuto e alla collaborazione con il gruppo, evidenziando quanto un eventuale
+            risultato positivo possa essere effettivamente utilizzato in futuro;
+            \item Possibilità di ottenere nuove conoscenze spendibili in futuro nel mondo lavorativo;
+            \item Possibilità di applicare gli insegnamenti avuti dal corso parallelo di Tecnologie Web.
         \end{itemize}
-        \subsubsection{Contro} Contro
+        \paragraph{Fattori critici}
         \begin{itemize}
-            \item Molti di noi non hanno familiarità con le tecnologie proposte;
-            \item Il dover creare un grafico/dataset per permettere ad un occhio umano di individuare al volo un accesso sospetto ed il renderlo più pulito possibile;
+            \item La maggior parte degli elementi del gruppo ha poca o nulla familiarità con le tecnologie proposte;
+            \item Il dover creare grafici puliti e chiari per permettere la veloce individuazione di un accesso sospetto
             \item confrontarsi con librerie e algoritmi di ML.
         \end{itemize}
     
-    \subsection{Conclusioni} Conclusioni
-    
-    L'ottimo esito della riunione avuta col signor.Gregorio Piccoli e le accortezze prese dall'azienda nonchè l'utilizzo di tecnologie molto stimolanti ci ha portato a scegliere questo capitolato, come capitolato di prima scelta.
+    \subsubsection{Conclusioni}
+    Il buon esito degli incontri avuti con il referente di Zucchetti S.p.A., Gregorio Piccoli, e le accortezze prese dall'azienda,
+    nonché la possibilità di utilizzare tecnologie interessanti e di affrontare un argomento molto stimolante per tutti gli elementi del
+    gruppo, ha portato alla scelta del capitolato in oggetto.
     
     \begin{figure}[h!]
         \centering
@@ -126,65 +136,89 @@
         \label{zucchetti}
     \end{figure}
 
-
 \newpage
 
-\section{Capitolato C1}
-    \subsection{Info sul Capitolato} Info sul capitolato
+
+\section{Valutazioni sui capitolati rimanenti}
+\subsection{Capitolato C1: Bot4Me}
+
+    \subsubsection{Informazioni generali}
     \begin{itemize}
-        \item \textbf{Nome}: Bot4Me
-        \item \textbf{Proponente}: Imola Informatica
-        \item \textbf{Committente}: Prof. Tullio Vardanega e Prof. Riccardo Cardin
+        \item \textbf{Nome}: Bot4Me;
+        \item \textbf{Proponente}: Imola Informatica S.p.A.;
+        \item \textbf{Committente}: Prof. Tullio Vardanega e Prof. Riccardo Cardin.
     \end{itemize}
-    \subsection{Descrizione} Descrizione
     
-    Il progetto si focalizza sulla realizzazione di un’applicazione chatbot con lo scopo di aiutare i dipendenti a famigliarizzare con gli strumenti e con il contesto aziendale.
+    \subsubsection{Descrizione}
+    Il capitolato si focalizza sulla realizzazione di un'applicazione chatbot in grado di interpretare un flusso testuale,
+    con lo scopo di aiutare i dipendenti a familiarizzare con gli strumenti e con il contesto aziendale.
     
     \begin{figure}[h!]
         \centering
-        \includegraphics[scale=0.4]{Res/BotMe.png}
+        \includegraphics[scale=0.3]{Res/BotMe.png}
         \caption{Logo Bot4Me}
         \label{Bot4Me}
     \end{figure} 
     
-    \subsection{Studio del Dominio} Studio del Dominio
-        \subsubsection{Dominio Applicativo} Dominio Applicativo
+    \subsubsection{Dominio}
+        \paragraph{Dominio Applicativo}~\\
+
+        Il capitolato vuole soddisfare l'esigenza del poter consuntivare le attività giornaliere dei dipendenti aziendali in un
+        periodo storico ove il Covid-19 ha costretto a mutare radicalmente modi di fare e abitudini delle persone.
+        L'applicazione permetterebbe quindi di:
+		\begin{itemize}
+			\item Effettuare operazioni di check-in e check-out;
+			\item Inserire di un consuntivo dell'attività giornaliera;
+			\item Creare nuove riunioni;
+			\item Aprire ticket di tracciamento di bug o progetti;
+			\item Ricercare dei documenti sul repository aziendale;
+			\item Aprire il cancello della sede aziendale.			
+		\end{itemize}		        
+		
+        \paragraph{Dominio Tecnologico}~\\
         
-        Il capitolato vuole soddisfare l' esigenza del poter consuntivare le attività giornaliere in un periodo storico dove il Covid-19 ci ha costretto a mutare radicalmente i nostri modi di fare e le nostre abitudini.
-        Permettere quindi il tracciamento delle presenze e delle persone, la possibilità quindi poi di creare una nuova riunione e un nuovo ticket sempre secondo la filosofia del tracciamento.
-        \subsubsection{Dominio Tecnologico} Dominio Tecnologico
-        
-        Per lo svolgimento del capitolato e per la creazione dell'applicatovo viene richiesta la conoscenza e la padronanza delle seguenti tecnologie:
+        Per lo svolgimento del capitolato e per la creazione dell'applicativo sono richieste la conoscenza e la padronanza
+        delle seguenti tecnologie:
         \begin{itemize}
-            \item \textit{API  di EMT}: per la registrazione  dell’ingresso e l’inserimento di attività ;
-            \item \textit{protocollo MQTT}: per gestire l’apertura del cancello(requisito opzionale);
-            \item \textit{API Redmine}: per effettuare l’operazione di inserimento  di un nuovo ticket;
-            \item \textit{Git}: per il versionamento dell'applicativo.
+            \item \textit{API di EMT}: per la registrazione dell'ingresso e l'inserimento di attività;
+            \item \textit{Protocollo MQTT}: per la gestione dell'apertura del cancello (requisito opzionale);
+            \item \textit{API Redmine}: per effettuare le operazioni di inserimento di un nuovo ticket;
         \end{itemize}
     
-    \subsubsection{Fattori Critici} Fattori critici
-    
-    I fattori critici su cui ci siamo soffermati e che ci hanno fatto desistere dall'intraprendere questo capitolato sono:
-    \begin{itemize}
-            \item molti requisiti obbligatori che richiedono una certa praticità con tecnologie differenti;
-            \item difficoltà nel garantire un alto livello di sicurezza senza poter richiedere l’autenticazione per lo strumento in uso;
-            \item interpretazione del flusso non solo testuale ma anche vocale.
+    \subsubsection{Fattori Critici}
+    Qui di seguito i fattori critici sui quali si è soffermato il gruppo e che hanno fatto desistere dalla scelta del capitolato in
+    oggetto:
+    	\begin{itemize}
+            \item Presenza di molti requisiti obbligatori, i quali richiedono una certa praticità con tecnologie differenti;
+            \item Necessaria interpretazione del flusso vocale, oltre a quello testuale.
+            \item Difficoltà nel garantire un alto livello di sicurezza senza poter richiedere l'autenticazione per lo strumento in uso;
         \end{itemize}
-    \subsection{Conclusioni} Conclusioni
-    
-    Il dominio applicativo dell'azienda appartiene ad un ambito che ha stimolato pochi di noi, non ci ha spinti verso l'assunzione del capitolato C1, ritenuto da noi molto valido nella sua interezza ma poco incline ai nostri interessi come gruppo.
+        
+    \subsubsection{Conclusioni}
+    Il dominio applicativo del capitolato appartiene ad un ambito che ha stimolato pochi membri del gruppo e non lo ha spinto verso
+    la scelta del capitolato in esame, ritenuto comunque molto valido e ricco di spunti nella sua interezza.
     
     \newpage
 
-\section{Capitolato C2}
-    \subsection{Info sul Capitolato} Info sul capitolato
+
+
+
+
+
+
+
+
+
+\subsection{Capitolato C2: BlockChange}
+
+    \subsection{Informazioni generali}
     \begin{itemize}
-        \item \textbf{Nome}: BlockChange - Exchange Platform on BlockChain
-        \item \textbf{Proponente}: Sync Lab
-        \item \textbf{Committente}: Prof. Tullio Vardanega e Prof. Riccardo Cardin
+        \item \textbf{Nome}: BlockChange - Exchange Platform on BlockChain;
+        \item \textbf{Proponente}: Sync Lab S.r.l.;
+        \item \textbf{Committente}: Prof. Tullio Vardanega e Prof. Riccardo Cardin.
     \end{itemize}
-    \subsection{Descrizione} Descrizione
     
+    \subsection{Descrizione}
     Viene richiesta la realizzazione di una piattaforma di pagamento digitale che utilizzi come metodo di pagamento un insieme di criptovalute. Lo scopo di tale servizio dovrebbe essere quello di garantire lo scambio di beni tra acquirente e fornitore in maniera sicura e affidabile, in modo tale che nessuna delle due parti sia lesa.
     
     Qui sotto un immagine che riassume il tutto:
@@ -196,11 +230,11 @@
         \label{SyncLab}
     \end{figure}
     
-    \subsection{Studio del Dominio} Studio del Dominio
-        \subsubsection{Dominio Applicativo} Dominio Applicativo
+    \subsection{Dominio}
+        \subsubsection{Dominio Applicativo}
         
         Il capitolato si colloca nell’ambito degli acquisti online, dove da un lato c’è il compratore che desidera acquistare un bene mediante criptovaluta, dall’altro il venditore che vende un prodotto. Il luogo in cui le due parti si incontrano è un e-commerce.
-        \subsubsection{Dominio Tecnologico} Dominio Tecnologico
+        \subsubsection{Dominio Tecnologico}
         
         La Proponente preferisce non imporre tecnologie specifiche, ma resta aperta a nuove idee e proposte da parte dei fornitori del capitolato. Tuttavia esprime alcune scelte preferenziali da considerare nello svolgimento del progetto:	
         \begin{itemize}
@@ -209,7 +243,7 @@
 			\item Utilizzo di database \textit{PostgreSQL}.
 		\end{itemize}
     
-    \subsubsection{Fattori Critici} Fattori critici
+    \subsubsection{Fattori Critici}
     I fattori critici su cui ci siamo soffermati ed ci hanno fatto desistere dall'intraprendere questo capitolato sono:
    \begin{itemize}
 		\item Scarsa conoscenza da parte del gruppo della Blockchain così come della maggior parte delle tecnologie consigliate;
@@ -218,12 +252,32 @@
 		\item Non è possibile garantire l’anonimato dell’acquirente;
 		\item Possono sorgere inconvenienti nel caso di rimborsi dovuti a prodotti malfunzionanti o indesiderati.
 	\end{itemize}
-    \subsection{Conclusioni} Conclusioni
+    \subsection{Conclusioni}
     
     Inizialmente il gruppo ha preso in considerazione questa proposta. Tuttavia durante gli incontri che si sono tenuti sono emerse delle perplessità riguardanti l’effettiva fattibilità di questo capitolato. L’incontro tenutosi con l’azienda ha risposto solo parzialmente ai dubbi. Si è scelto quindi di escludere questo capitolato.
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 \section{Capitolato C3}
-    \subsection{Info sul Capitolato} Info sul capitolato
+    \subsection{Informazioni generali} Informazioni generali
     \begin{itemize}
         \item \textbf{Nome}: CC4D
         \item \textbf{Proponente}: SanMarco Informatica
@@ -235,7 +289,7 @@
     permetta all’utente di gestire il controllo statistico dei processi di macchine produttive e 
     le relative caratteristiche da raccogliere in database e visualizzare su grafici.
     
-    \subsection{Studio del Dominio} Studio del Dominio
+    \subsection{Dominio} Dominio
         \subsubsection{Dominio Applicativo} Dominio Applicativo
         
         Il capitolato vuole portare il grupppo attraverso svariati strumenti e tecnologie a  creare un' API per l’immissione della misurazione di una determinata caratteristica, e la creazione di un motore di calcolo che, alla ricezione di una nuova misurazione, si occupi di metterla in relazione con le
@@ -266,7 +320,7 @@
 \newpage
     
 \section{Capitolato C4}
-    \subsection{Info sul Capitolato} Info sul capitolato
+    \subsection{Informazioni generali} Informazioni generali
     \begin{itemize}
         \item \textbf{Nome}: Guida Michelin @ social
         \item \textbf{Proponente}: ZERO12
@@ -283,7 +337,7 @@
         \label{GuidaMIchelin}
     \end{figure}
     
-    \subsection{Studio del Dominio} Studio del Dominio
+    \subsection{Dominio} Dominio
         \subsubsection{Dominio Applicativo} Dominio Applicativo
         
         Il capitolato si colloca nell'ambito dei social network.
@@ -318,7 +372,7 @@
 \newpage
 
 \section{Capitolato C6}
-    \subsection{Info sul Capitolato} Info sul capitolato
+    \subsection{Informazioni generali} Informazioni generali
     \begin{itemize}
         \item \textbf{Nome}: Smart4Energy – A new way in energy monitoring and control
         \item \textbf{Proponente}: Socomec Innovative Power Solutions
@@ -332,7 +386,7 @@
     Per poter quindi fornire ausilio per un avanzamento tecnologico ai gurppi di continuità (UPS), per far si che possano essere fruiti ed utilizzati, tramite diverse tecnologie, da differenti device.
     
     
-    \subsection{Studio del Dominio} Studio del Dominio
+    \subsection{Dominio} Dominio
         \subsubsection{Dominio Applicativo} Dominio Applicativo
         
         Il capitolato vuole soddisfare una nuova esigenza nell'ambito dell'UPS derivata dai consumatori.
