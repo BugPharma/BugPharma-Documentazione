@@ -68,6 +68,7 @@
 
 
 \section{Valutazione del capitolato scelto}
+
 \subsection{Capitolato C5 - Login Warrior}
 
     \subsubsection{Informazioni generali}
@@ -84,7 +85,16 @@
     
     Tale applicazione fornirà quindi ausilio ai data analyst, i quali, partendo da un insieme di dati contenuti in un file
     \texttt{CSV}, potranno risalire a grafici e dataset che forniranno un immediato riscontro visivo sulla presenza o meno di attività
-    illecite.
+    illecite, come riportato esemplificativamente in figura qui sotto:
+    
+    \bigskip
+    
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[scale=0.4]{Res/LoginWarrior.png}
+        \caption{Esempio di un grafico raffigurante una possibile frode.}
+        \label{zucchetti}
+    \end{figure}
     
     \subsubsection{Dominio}
         \paragraph{Dominio Applicativo}~\\
@@ -120,26 +130,18 @@
         \paragraph{Fattori critici}
         \begin{itemize}
             \item La maggior parte degli elementi del gruppo ha poca o nulla familiarità con le tecnologie proposte;
-            \item Il dover creare grafici puliti e chiari per permettere la veloce individuazione di un accesso sospetto
-            \item confrontarsi con librerie e algoritmi di ML.
         \end{itemize}
     
     \subsubsection{Conclusioni}
     Il buon esito degli incontri avuti con il referente di Zucchetti S.p.A., Gregorio Piccoli, e le accortezze prese dall'azienda,
     nonché la possibilità di utilizzare tecnologie interessanti e di affrontare un argomento molto stimolante per tutti gli elementi del
     gruppo, ha portato alla scelta del capitolato in oggetto.
-    
-    \begin{figure}[h!]
-        \centering
-        \includegraphics[scale=0.4]{Res/LoginWarrior.png}
-        \caption{Grafico accesso utenti}
-        \label{zucchetti}
-    \end{figure}
 
 \newpage
 
 
 \section{Valutazioni sui capitolati rimanenti}
+
 \subsection{Capitolato C1: Bot4Me}
 
     \subsubsection{Informazioni generali}
@@ -163,6 +165,7 @@
     \subsubsection{Dominio}
         \paragraph{Dominio Applicativo}~\\
 
+		\noindent
         Il capitolato vuole soddisfare l'esigenza del poter consuntivare le attività giornaliere dei dipendenti aziendali in un
         periodo storico ove il Covid-19 ha costretto a mutare radicalmente modi di fare e abitudini delle persone.
         L'applicazione permetterebbe quindi di:
@@ -177,6 +180,7 @@
 		
         \paragraph{Dominio Tecnologico}~\\
         
+        \noindent
         Per lo svolgimento del capitolato e per la creazione dell'applicativo sono richieste la conoscenza e la padronanza
         delle seguenti tecnologie:
         \begin{itemize}
@@ -201,124 +205,129 @@
     \newpage
 
 
-
-
-
-
-
-
-
-
 \subsection{Capitolato C2: BlockChange}
 
-    \subsection{Informazioni generali}
+    \subsubsection{Informazioni generali}
     \begin{itemize}
         \item \textbf{Nome}: BlockChange - Exchange Platform on BlockChain;
         \item \textbf{Proponente}: Sync Lab S.r.l.;
         \item \textbf{Committente}: Prof. Tullio Vardanega e Prof. Riccardo Cardin.
     \end{itemize}
     
-    \subsection{Descrizione}
-    Viene richiesta la realizzazione di una piattaforma di pagamento digitale che utilizzi come metodo di pagamento un insieme di criptovalute. Lo scopo di tale servizio dovrebbe essere quello di garantire lo scambio di beni tra acquirente e fornitore in maniera sicura e affidabile, in modo tale che nessuna delle due parti sia lesa.
-    
-    Qui sotto un immagine che riassume il tutto:
+    \subsubsection{Descrizione}
+	Il capitolato espone la richiesta di realizzazione di una piattaforma di pagamento digitale che utilizzi come metodo di pagamento
+	un insieme di cripto valute. Lo scopo di tale servizio dovrebbe essere quello di garantire lo scambio di beni tra acquirente e
+	fornitore in maniera sicura e affidabile, in modo tale che nessuna delle due parti sia lesa, sulla base dello schema riportato in
+	figura qui sotto:
     
     \begin{figure}[h!]
         \centering
         \includegraphics[scale=0.4]{Res/SyncLab.png}
-        \caption{Pagamento sicuro e consegna garantita}
+        \caption{Schema della soluzione della piattaforma.}
         \label{SyncLab}
     \end{figure}
     
-    \subsection{Dominio}
-        \subsubsection{Dominio Applicativo}
+    \subsubsection{Dominio}
+        \paragraph{Dominio Applicativo}~\\
         
-        Il capitolato si colloca nell’ambito degli acquisti online, dove da un lato c’è il compratore che desidera acquistare un bene mediante criptovaluta, dall’altro il venditore che vende un prodotto. Il luogo in cui le due parti si incontrano è un e-commerce.
-        \subsubsection{Dominio Tecnologico}
+        \noindent
+        Il capitolato si colloca nell'ambito degli acquisti online, ove da un lato è presente il compratore che desidera acquistare un
+        bene mediante cripto valuta, mentre dall'altro il venditore che vende un prodotto.
+        Il luogo in cui le due parti si incontrano è un e-commerce.
         
-        La Proponente preferisce non imporre tecnologie specifiche, ma resta aperta a nuove idee e proposte da parte dei fornitori del capitolato. Tuttavia esprime alcune scelte preferenziali da considerare nello svolgimento del progetto:	
+        \paragraph{Dominio Tecnologico}~\\
+        
+        \noindent
+        Il proponente preferisce non imporre tecnologie specifiche, ma resta aperto a nuove idee e proposte da parte dei fornitori.
+        Tuttavia esprime alcune scelte preferenziali da considerare nello svolgimento del progetto:	
         \begin{itemize}
-		    \item  Utilizzo di Blockchain pubblica, come ad esempio Ethereum, con linguaggio \textit{Solidity} da usare per la scrittura degli smart contract; 
-			\item Utilizzo di \textit{Java} e \textit{Angular} per lo sviluppo delle parti di Back-end e di Front-end della componente Web Application del sistema; 
-			\item Utilizzo di database \textit{PostgreSQL}.
+		    \item \textit{Ethereum}: come blockchain pubblica;
+		    \item \textit{Solidity}: per la definizione degli smart contract;
+			\item \textit{Java} e \textit{Angular}: per lo sviluppo delle parti di back-end e di front-end della componente
+			web application del sistema;
+			\item \textit{PostgreSQL}: per il database.
 		\end{itemize}
     
     \subsubsection{Fattori Critici}
-    I fattori critici su cui ci siamo soffermati ed ci hanno fatto desistere dall'intraprendere questo capitolato sono:
-   \begin{itemize}
-		\item Scarsa conoscenza da parte del gruppo della Blockchain così come della maggior parte delle tecnologie consigliate;
-		\item Risulta difficile gestire il caso in cui un pacco sia smarrito;
-		\item Nel caso in cui un pacco sia perso, occorre implementare dei meccanismi di rimborso del venditore da parte di chi si occupa della logistica;
-		\item Non è possibile garantire l’anonimato dell’acquirente;
-		\item Possono sorgere inconvenienti nel caso di rimborsi dovuti a prodotti malfunzionanti o indesiderati.
+    Qui di seguito i fattori critici sui quali si è soffermato il gruppo e che hanno fatto desistere dalla scelta del capitolato in
+    oggetto:
+   	\begin{itemize}
+		\item Scarsa conoscenza da parte del gruppo in ambito blockchain così come della maggior parte delle tecnologie consigliate;
+		\item Elevata quantità di casi d'uso di possibile difficile gestione.
 	\end{itemize}
-    \subsection{Conclusioni}
+	
+    \subsubsection{Conclusioni}
+    La proposta in oggetto era stata inizialmente presa in considerazione dal gruppo. Tuttavia, durante gli incontri tenutisi tra i membri
+    sono emerse perplessità riguardanti la sua effettiva fattibilità. Dato che l'incontro tenutosi con l'azienda ha risposto solo
+    parzialmente ai dubbi, si è scelto di escludere questo capitolato. 
     
-    Inizialmente il gruppo ha preso in considerazione questa proposta. Tuttavia durante gli incontri che si sono tenuti sono emerse delle perplessità riguardanti l’effettiva fattibilità di questo capitolato. L’incontro tenutosi con l’azienda ha risposto solo parzialmente ai dubbi. Si è scelto quindi di escludere questo capitolato.
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-\section{Capitolato C3}
-    \subsection{Informazioni generali} Informazioni generali
+    \newpage
+
+
+\subsection{Capitolato C3: CC4D}
+    \subsubsection{Informazioni generali}
     \begin{itemize}
-        \item \textbf{Nome}: CC4D
-        \item \textbf{Proponente}: SanMarco Informatica
-        \item \textbf{Committente}: Prof. Tullio Vardanega e Prof. Riccardo Cardin
+        \item \textbf{Nome}: CC4D;
+        \item \textbf{Proponente}: SanMarco Informatica S.p.A.;
+        \item \textbf{Committente}: Prof. Tullio Vardanega e Prof. Riccardo Cardin.
     \end{itemize}
-    \subsection{Descrizione} Descrizione
     
-    Il progetto ha lo scopo di creare una web application, sia per mobile che per desktop,che
-    permetta all’utente di gestire il controllo statistico dei processi di macchine produttive e 
-    le relative caratteristiche da raccogliere in database e visualizzare su grafici.
-    
-    \subsection{Dominio} Dominio
-        \subsubsection{Dominio Applicativo} Dominio Applicativo
+    \subsubsection{Descrizione}
+    Il capitolato ha per oggetto la creazione di: 
+	\begin{itemize}
+		\item Una web application che permetta all'utente (admin/configurator) di censire la macchine produttive e
+		le relative caratteristiche da raccogliere e visualizzare;
+		\item Una API (\textit{REST} o \textit{GraphQL}), per l'immissione della misurazione di una determinata
+		caratteristica;
+		\item Un motore di calcolo che, alla ricezione di una nuova misurazione (da relativa API), si occupi di metterla in
+		relazione con le misurazioni precedenti al fine di calcolare se la serie di punti evidenza un processo "fuori controllo";
+		\item Una web application che permetta di selezionare una o più delle caratteristiche censite, a parità di macchina,
+		e visualizzi, a rotazione la relativa carta di controllo.
+	\end{itemize}	    
+
+    \subsubsection{Dominio}
+        \paragraph{Dominio Applicativo}~\\
         
-        Il capitolato vuole portare il grupppo attraverso svariati strumenti e tecnologie a  creare un' API per l’immissione della misurazione di una determinata caratteristica, e la creazione di un motore di calcolo che, alla ricezione di una nuova misurazione, si occupi di metterla in relazione con le
-        misurazioni precedenti al fine di calcolare se la serie di punti evidenza un processo “fuori controllo”.
-        \subsubsection{Dominio Tecnologico} Dominio Tecnologico
+		\noindent
+        Il capitolato verte sull'utilizzo di svariati strumenti e tecnologie per la creazione di un applicativo volto all'utilizzo
+        in ambito industriale per la rilevazione di conformità, come illustrato nella descrizione del progetto.
         
-        Per lo svolgimento del capitolato e per la creazione dell'applicatovo viene richiesta la conoscenza e la padronanzza delle seguenti tecnologie:
+        \paragraph{Dominio Tecnologico}~\\
+
+		\noindent
+        Per lo svolgimento del capitolato e per la creazione dell'applicativo sono richieste la conoscenza e la padronanza delle
+        seguenti tecnologie:
         \begin{itemize}
-            \item \textit{NodeJS}: libreria JavaScript per la gestione del comportamento dell'applicativo;
-            \item \textit{React}: per la parte front-end con js;
-            \item \textit{Angular}: per il front-end;
-            \item \textit{Git}: per il versionamento dell'applicativo.
+            \item \textit{Java} o \textit{NodeJS}: per la creazione della API e del motore di calcolo;
+            \item \textit{React}, \textit{Angular} o \textit{VUE}: per la creazione della web application;
+            \item \textit{Sql} o \textit{NoSql}: per il salvataggio delle configurazioni prodotte dalla web application;
+            \item \textit{MongoDb} o \textit{MariaDb}: per il salvataggio delle informazioni prodotte dalla API;
+            \item \textit{D3.js}: per la creazione dei grafici.
         \end{itemize}
     
-    \subsubsection{Fattori Critici} Fattori critici
-    
-    I fattori critici su cui ci siamo soffermati ed ci hanno fatto desistere dall'intraprendere questo capitolato sono:
+    \subsubsection{Fattori Critici}
+    Qui di seguito i fattori critici sui quali si è soffermato il gruppo e che hanno fatto desistere dalla scelta del capitolato in
+    oggetto:
     \begin{itemize}
-            \item Molti temi di ambito differenti che richiedono un buon approfondimento;
-            \item Spiegazione del capitolato troppa sintetica; 
-            \item Moltitudine di requisiti obbligatori;
-            \item Conoscere e dominare bene l'utilizzo di diverse tecnologie;
-        \end{itemize}
-    \subsection{Conclusioni} Conclusioni
+    	\item Elevata quantità di temi in ambiti differenti che richiederebbero un buon approfondimento;
+    	\item Elevata quantità di requisiti obbligatori;
+    	\item Necessaria conoscenza di diverse tecnologie;
+    \end{itemize}
     
-    Il dominio applicativo dell'azienda appartiene ad un ambito che ha stimolato pochi di noi, non ci ha spinti verso l'assunzione del capitolato C3, ritenuto da noi molto valido nella sua interezza ma poco incline ai nostri interessi come gruppo.    
+    \subsubsection{Conclusioni}
+    Il dominio applicativo del capitolato appartiene ad un ambito che ha stimolato pochi elementi del gruppo, non non spingendolo
+    verso la scelta del capitolato in esame, ritenuto comunque molto valido nella sua interezza.    
     
 \newpage
     
+
+
+
+
+
+
+
+
 \section{Capitolato C4}
     \subsection{Informazioni generali} Informazioni generali
     \begin{itemize}
@@ -370,6 +379,13 @@
     Il dominio applicativo dell'azienda appartiene ad un ambito che ha stimolato pochi di noi, non ci ha spinti verso l'assunzione del capitolato C4, ritenuto da noi molto valido nella sua interezza ma poco incline ai nostri interessi come gruppo, il capitolato è stato poi scartato anche per via dei molti punti poco chiari.
 
 \newpage
+
+
+
+
+
+
+
 
 \section{Capitolato C6}
     \subsection{Informazioni generali} Informazioni generali
