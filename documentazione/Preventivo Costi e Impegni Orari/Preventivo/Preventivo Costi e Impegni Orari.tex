@@ -9,6 +9,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{colortbl}
+\usepackage{caption}
 
 \usepackage{natbib}
 \usepackage{graphicx}
@@ -77,6 +78,8 @@
 Ogni studente del gruppo BugPharma si impegna a lavorare al Progetto Didattico per 97 ore produttive.
 Tali ore verranno suddivise come segue all'interno dei vari ruoli richiesti per lo svolgimento del progetto: \\
 
+\begin{table}[h!]
+\centering
 \begin{tabular}{|l|c|c|c|}
 \hline
 \textbf{Ruoli} & \textbf{Costo orario} & \textbf{Ore per ruolo} & \textbf{Ore per membro}\\
@@ -89,37 +92,44 @@ Analista & 25 & 56 & 8 \\
 \hline
 Progettista & 25 & 112 & 16\\
 \hline
-Programmatore & 15 & 189 & 27\\
+Programmatore & 15 & 196 & 28\\
 \hline
-Verificatore & 15 & 196 & 28\\
+Verificatore & 15 & 210 & 30\\
 \hline
             & \textbf{Totale Costo} & \textbf{Totale Ore} & \textbf{Totale ore per membro} \\
 \hline
-            & \cellcolor{green!25}13125 & 679 & 97 \\
+            & \cellcolor{green!25}13440 & 700 & 100 \\
 \hline
-\end{tabular}  \\
+\end{tabular}
+\caption{Costo Orario per Ruolo}
+\label{table:1}
+\end{table}
 
-%    QUESTA FORSE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \\
-%    
-%\begin{tabular}{|l|c|c|c|c|c|c|c|}
-%\hline
-%     &  Re & Amm & An & Pj & Pr & Ve & Totale ore per membro \\
-%\hline
-%    Silvia & 10 & 9 & 6 & 15 & 28 & 29 & 97 \\ 
-%\hline
-%    Nicholas & 9 & 8 & 10 & 15 & 28 & 27 & 97 \\
-%\hline
-%    Michele & 9 & 10 & 8 & 17 & 26 & 27 & 97 \\ 
-%\hline
-%    Sara & 9 & 9 & 9 & 16 & 24 & 30 & 97 \\ 
-%\hline
-%    Nicla & 10 & 9 & 7 & 17 & 27 & 27 & 97 \\
-%\hline
-%    Andrea & 8 & 11 & 8 & 14 & 27 & 29 & 97 \\
-%\hline
-%    Lorenzo & 8 & 7 & 8 & 18 & 29 & 27 & 97 \\ 
-%\hline
-%\end{tabular} \\
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|c|c|c|c|c|c|c|}
+\hline
+    \textbf{Membro} &  \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pj} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale ore per membro} \\
+\hline
+    Silvia & 10 & 9 & 6 & 15 & 29 & 31 & 100 \\ 
+\hline
+    Nicholas & 9 & 8 & 10 & 15 & 29 & 29 & 100 \\
+\hline
+    Michele & 9 & 10 & 8 & 17 & 27 & 29 & 100 \\ 
+\hline
+    Sara & 9 & 9 & 9 & 16 & 25 & 32 & 100 \\ 
+\hline
+    Nicla & 10 & 9 & 7 & 17 & 28 & 29 & 100 \\
+\hline
+    Andrea & 8 & 11 & 8 & 14 & 28 & 31 & 100 \\
+\hline
+    Lorenzo & 8 & 7 & 8 & 18 & 30 & 29 & 100 \\ 
+\hline
+\end{tabular}
+\caption{Suddivisione Ore per Membro}
+\label{table:1}
+\end{table}
+
 
 \section{Considerazioni sui Ruoli}
 Le ore sono state assegnate ai vari ruoli in base alle seguenti considerazioni:
@@ -127,39 +137,39 @@ Le ore sono state assegnate ai vari ruoli in base alle seguenti considerazioni:
 \subsection{Responsabile e Amministratore}
     \begin{itemize}
         \item Queste due figure, interpretate da membri diversi durante lo svolgimento del progetto, saranno sempre presenti e necessarie per garantirne il corretto avanzamento. 
-        \item Nelle circa 26 settimane lavorative che occuperà  il progetto, si prevede un supporto sempre attento e presente da parte di chi interpreterà questi ruoli.
+        \item Nelle circa 26 settimane lavorative che occuperà  il progetto, si prevede un supporto sempre attento e presente da parte di chi assumerà questi ruoli.
     \end{itemize}
 \subsection{Analisti}
     \begin{itemize}
-        \item È stato colto come il processo di analisi dei requisiti sia fondamentale nello sviluppo di un progetto.
+        \item È stato notato come il processo di analisi dei requisiti sia fondamentale nello sviluppo di un progetto.
         \item Anche grazie alla chiarezza del capitolato scelto, si auspica un periodo di analisi che rispetti i tempi previsti in tabella.
     \end{itemize}
 \subsection{Progettisti}
     \begin{itemize}
-        \item Per la fase di progettazione si prevede un ammontare di lavoro cospicuo.
-        \item Notato che:
+        \item Per la fase di progettazione si prevede un cospicuo ammontare di lavoro.
+        \item Considerando che:
             \begin{itemize}
-                \item Alcuni membri del gruppo possiedono un'infarinatura generale nell'ambito Machine Learning;
-                \item Buona parte del gruppo ha già superato con successo l'esame di Tecnologie Web;
+                \item Alcuni membri del gruppo possiedono un'infarinatura generale nell'ambito del Machine Learning;
+                \item Buona parte dei componenti del gruppo ha già superato con successo l'esame di Tecnologie Web;
                 \item Il Porponente si dimostra disponibile nel condividere conoscenze e strumenti durante lo svolgimento del progetto.
             \end{itemize}
-        Si conclude che le risorse a disposizione sono tali da permettere al gruppo di approcciare la fase di progettazione in modo soddisfacente.
+        Si è concluso che le risorse a disposizione risultano essere tali da permettere al gruppo di approcciare la fase di progettazione in modo soddisfacente.
     \end{itemize}
 \subsection{Programmatori}
     \begin{itemize}
-        \item Si nota come la fase di programmazione richieda un impegno costante per implementare i vari requisiti (obbligatori e non) richiesti dall'azienda.
-        \item Mettendo un quantitativo di ore sostanziale a disposizione di questa fase, il gruppo si auspica di riuscire a costruire tutto ciò che verrà ritenuto necessario nelle fasi preparative precedenti (di analisi e progettazione).
+        \item È stato notato come la fase di programmazione necessiti di un impegno costante per implementare i vari requisiti (obbligatori e non) richiesti dall'azienda.
+        \item Mettendo un quantitativo di ore sostanziale a disposizione di questa fase, il gruppo si auspica di riuscire a implementare tutto ciò che verrà ritenuto necessario nelle fasi preparative precedenti (di analisi e progettazione).
     \end{itemize}
 \subsection{Verificatori}
     \begin{itemize}
-        \item Notata la necessità di affidabilità e robustezza richieste dal prodotto software, si decide di dare molta importanza al ruolo di coloro che verificheranno ciò che è stato programmato.
+        \item Data la necessità di affidabilità e robustezza richieste dal prodotto software, si è deciso di dare molta importanza al ruolo di coloro che verificheranno ciò che è stato programmato.
     \end{itemize}
 \section{Preventivo dei costi}
-Il costo finale del Progetto Didattico ammonta a \textbf{13125 \euro}, come visto nella tabella numero 1.
+Il costo finale del Progetto Didattico ammonta a \textbf{13440 \euro}, come visto nella tabella numero 1.
 \section{Scadenza di consegna}
 Il gruppo stima di consegnare il prodotto finito relativo al capitolato 
 \textbf{Login Warrior} proposto dall'azienda 
-\textbf{Zucchetti} entro il 23 Maggio 2022. 
+\textbf{Zucchetti S.p.A.} entro il 23 Maggio 2022. 
 
 
 \end{document}
